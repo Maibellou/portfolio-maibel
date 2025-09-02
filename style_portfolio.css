@@ -1,0 +1,79 @@
+ /* Mockup placeholder for future video */
+ .video-placeholder {
+     position: relative;
+     width: 100%;
+     padding-top: 56.25%;
+     border-radius: 1rem;
+     overflow: hidden;
+     background: linear-gradient(180deg, rgba(168, 82, 63, 0.06), rgba(114, 24, 0, 0.04));
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid rgba(76, 20, 0, 0.06);
+ }
+
+ .video-placeholder .play {
+     width: 80px;
+     height: 80px;
+     border-radius: 9999px;
+     background: rgba(114, 24, 0, 0.12);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: transform .18s ease;
+ }
+
+ .video-placeholder:hover .play {
+     transform: scale(1.05);
+ }
+
+ .video-placeholder svg {
+     stroke: rgba(255, 255, 255, 0.95);
+     stroke-width: 0;
+     fill: rgba(255, 255, 255, 0.95);
+ }
+
+ /* Wrapper responsivo para iframes (Figma / Drive) */
+ .responsive-embed {
+     position: relative;
+     width: 100%;
+     padding-top: 56.25%;
+     /* 16:9 */
+     overflow: hidden;
+     border-radius: 1rem;
+     box-shadow: 0 10px 30px rgba(35, 35, 35, 0.08);
+     background: rgba(0, 0, 0, 0.02);
+ }
+
+ .responsive-embed>iframe {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+     border: 0;
+ }
+
+ /* “Mockup” móvil minimal para el hero (sin imagen obligatoria) */
+ .phone {
+     position: relative;
+     width: 240px;
+     height: 480px;
+     border-radius: 28px;
+     border: 2px solid rgba(35, 35, 35, 0.08);
+     background: linear-gradient(160deg, rgba(255, 114, 92, 0.18), rgba(255, 149, 133, 0.18));
+     backdrop-filter: blur(6px);
+     box-shadow: 0 12px 40px rgba(35, 35, 35, 0.10);
+     overflow: hidden;
+ }
+
+ .phone:before {
+     content: '';
+     position: absolute;
+     top: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 6px;
+     border-radius: 9999px;
+     background: rgba(35, 35, 35, 0.12);
+ }
