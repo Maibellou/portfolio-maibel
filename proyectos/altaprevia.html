@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alta Previa</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Nunito:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive'],
+            nunito: ['Nunito', 'sans-serif']
+          },
+          colors: {
+            alta: {
+              bg: '#161616',
+              cyan: '#00D0C3',
+              purple: '#CC00FF',
+              pink: '#FE1185',
+              orange: '#FF6845',
+              yellow: '#FFEB33',
+              text: '#ffffff'
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 30px rgba(0,0,0,0.3)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../style_portfolio.css" />
+</head>
+
+<body class="bg-alta-bg text-alta-text font-nunito antialiased relative overflow-x-hidden">
+
+  <!-- FONDOS GRADIENTES - ALTA PREVIA -->
+  <div class="absolute -z-10 inset-0 overflow-hidden">
+    <!-- 1. Arriba izquierda -->
+    <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(0,208,195,0.35)"></div> <!-- cyan -->
+
+    <!-- 2. Arriba derecha (más abajo) -->
+    <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+      style="background: rgba(204,0,255,0.4)"></div> <!-- purple -->
+
+    <!-- 3. Centro izquierda -->
+    <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(254,17,133,0.3)"></div> <!-- pink -->
+
+    <!-- 4. Centro derecha -->
+    <div class="absolute top-1/2 right-0 w-80 h-80 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(255,104,69,0.3)"></div> <!-- orange -->
+
+    <!-- 5. Abajo izquierda -->
+    <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(255,235,51,0.25)"></div> <!-- yellow -->
+
+    <!-- 6. Abajo derecha -->
+    <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+      style="background: rgba(0,208,195,0.3)"></div> <!-- cyan repetido -->
+  </div>
+
+
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="../portfolio.html" class="text-alta-text/70 hover:text-alta-text transition">← Volver a proyectos</a>
+    <a href="../index.html" class="text-alta-text/70 hover:text-alta-text transition">CV</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative max-w-6xl mx-auto px-6 py-12 md:py-20">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-3 text-sm text-alta-text/70 mb-4">
+          <span class="font-semibold">App & Marketing</span>
+          <span class="opacity-40">•</span>
+          <span>2023</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-baloo leading-tight mb-4 font-bold ">Alta Previa</h1>
+        <p class="text-alta-text/80 mb-6">
+          Diseño y desarrollo visual de la app, landing page, campañas digitales y presencia en Google Play.
+          Además, gestión de marketing digital y analítica.
+        </p>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium">UX/UI</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium">Landing
+            Web</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium">Diseño Email</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium">Redes
+            Sociales</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium">Google
+            Play</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium"> Filtros de
+            Instagram</span>
+          <span class="border border-white text-white px-4 py-2 rounded-full text-sm font-medium"> Prototipado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE EL PROYECTO -->
+  <section id="contexto" class="max-w-6xl mx-auto px-6 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 font-baloo">Sobre el proyecto</h2>
+    <div class="text-alta-text/80 leading-relaxed mb-6">
+      <p>
+        Alta Previa es una aplicación móvil de entretenimiento pensada para reuniones sociales, cuya propuesta se centra
+        en juegos interactivos que dinamizan las previas. Incluye dinámicas clásicas como Verdad o reto, Yo nunca y
+        Quién
+        es más probable, además de la posibilidad de personalizar la experiencia creando tarjetas propias de forma
+        manual
+        o con inteligencia artificial.
+      </p><br>
+      <p>
+        Mi trabajo abarcó por un lado el diseño, donde desarrollé la identidad visual, el diseño UI de la aplicación, el
+        prototipado, la
+        landing web, la creación de contenido para redes sociales, y los mails transaccionales.
+        Por otro lado, trabajé en la estrategia de marketing digital, que incluyó la investigación de mercado y
+        definición de target, la optimización ASO en Google Play y la gestión de Google Play Console para el monitoreo
+        de métricas de adquisición, engagement, retención, etc. Además, utilicé Google Analytics para Firebase con el
+        fin de analizar el comportamiento de
+        los usuarios y orientar la estrategia de crecimiento. Como complemento, produje filtros de Instagram
+        como recurso de difusión desde el diseño, desarrollo, hasta la implementación y monitoreo de métricas.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+      <div class="p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
+        <p class="text-sm text-alta-text/60 mb-1">Rol</p>
+        <p class="font-semibold">Branding + Diseño UI + Marketing Digital</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
+        <p class="text-sm text-alta-text/60 mb-1">Alcance</p>
+        <p class="font-semibold">App, Landing, Redes, Google Play</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-2">
+        <p class="text-sm text-alta-text/60 mb-1">Herramientas</p>
+        <p class="font-semibold">Figma, Google Console, Google Analytics para Firebase, Brevo, Spark AR, Adobe Suite
+          (Ps, Ai, Ae, Me).</p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- APP Y LANDING -->
+  <section id="diseno" class="max-w-6xl mx-auto px-6 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 font-baloo">Diseño y prototipo</h2>
+    <p class="text-white/80 mb-6">
+      Prototipo navegable de la app Alta Previa. Recomendado ver en modo pantalla completa.
+    </p>
+
+    <div class="flex flex-col items-center">
+      <a href="https://www.figma.com/proto/FTmYkgMDjvV7dyYtokHoKO/Alta-Previa---Dise%C3%B1o-App?page-id=3%3A69&node-id=3-70&viewport=440%2C266%2C0.08&t=xIbIgzuF4QNLQcOj-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2717%3A2264"
+        target="_blank" class="relative group inline-block transition transform hover:scale-105">
+
+        <!-- Marco del celular -->
+        <div
+          class="relative w-[320px] h-[640px] bg-black rounded-[3rem] shadow-2xl border-2 border-white overflow-hidden">
+
+          <!-- Pantalla (imagen de tu mockup) -->
+          <img src="../assets/alta_previa_mockup.png" alt="Prototipo Alta Previa" class="w-full h-full object-cover">
+
+          <!-- Notch (parte superior del iPhone) -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-black rounded-b-2xl"></div>
+
+          <!-- Overlay hover -->
+          <div
+            class="absolute inset-0 bg-[#161616]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-lg font-baloo font-bold text-white">Ver prototipo</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Botón -->
+      <a href="https://www.figma.com/proto/FTmYkgMDjvV7dyYtokHoKO/Alta-Previa---Dise%C3%B1o-App?page-id=3%3A69&node-id=3-70&viewport=440%2C266%2C0.08&t=xIbIgzuF4QNLQcOj-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2717%3A2264"
+        target="_blank"
+        class="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-color-bg hover:scale-105 transition font-bold border-2 border-white">
+        Abrir prototipo
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- LANDING -->
+  <section class="max-w-6xl mx-auto px-6 py-2 md:py-14">
+    <h2 class="text-3xl md:text-4xl font-bold font-baloo mb-4">Landing Page</h2>
+
+    <div class="justify-center">
+      <picture>
+        <!-- Mobile -->
+        <source srcset="../assets/altaprevia_portada_mobile.png" media="(max-width: 767px)">
+        <!-- Desktop (default) -->
+        <img src="../assets/altaprevia_portada_desktop.png" alt="Portada Alta Previa"
+          class="mx-auto max-w-[250px] sm:max-w-[320px] md:max-w-full rounded-lg shadow-soft mb-6 cursor-pointer">
+      </picture>
+    </div>
+
+    <!-- Botón -->
+    <div class="items-center flex flex-col gap-4">
+      <a href="https://www.altaprevia.com/" target="_blank"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-color-bg hover:scale-105 transition font-bold border-2 border-white">
+        Visitar Landing →
+      </a>
+    </div>
+
+  </section>
+
+  <!-- CAMPANAS Y MATERIALES -->
+  <section id="campanas-materiales" class="max-w-6xl mx-auto px-6 py-12 md:py-20 font-nunito">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 font-baloo">Proyectos Digitales</h2>
+    <p class="mb-12">
+      Desarrollo de filtros de Instagram, optimización de la app en Google Play, diseño de mails y creación de
+      contenidos digitales.
+    </p>
+
+    <!-- SUBSECCIÓN FILTROS DE INSTAGRAM -->
+    <div id="filtros-instagram" class="mb-16">
+      <h3 class="text-xl font-baloo font-bold mb-2">Filtros de Instagram</h3>
+      <p class="mb-4">
+        Se desarrollaron dos filtros diferentes: uno de los juegos individuales (Verdad o Reto) y otro de los juegos
+        grupales (Yo Nunca y Quién es más probable a).
+      </p>
+      <div class="hidden lg:grid grid-cols-3 gap-6 justify-items-center max-w-6xl mx-auto">
+        <video src="../assets/verdad_reto.mp4" autoplay loop muted playsinline
+          class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
+        <video src="../assets/verdad_reto_v2.mp4" autoplay loop muted playsinline
+          class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
+        <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+          class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
+      </div>
+
+      <!-- SLIDER MOBILE + TABLET -->
+      <div class="relative block lg:hidden">
+        <div id="videoSlider"
+          class="overflow-x-auto flex space-x-4 snap-x snap-mandatory scrollbar-hide scroll-smooth px-4">
+          <video src="../assets/verdad_reto.mp4" autoplay loop muted playsinline
+            class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
+          <video src="../assets/verdad_reto_v2.mp4" autoplay loop muted playsinline
+            class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
+          <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+            class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
+        </div>
+
+        <!-- Flechas -->
+        <button id="prevBtn"
+          class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10094;</button>
+        <button id="nextBtn"
+          class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10095;</button>
+      </div>
+
+    </div>
+
+    <!-- SUBSECCIÓN ASO EN GOOGLE PLAY -->
+    <div id="aso-googleplay" class="mb-16">
+      <h3 class="text-xl font-baloo font-bold mb-2">Google Play / ASO</h3>
+      <p class="mb-6">
+        Optimización de la ficha de la app en Google Play para mejorar su visibilidad y descargas, incluyendo nombre,
+        categoría, etiquetas y descripciones.
+      </p>
+
+      <!-- Imágenes siempre visibles (desktop) -->
+      <div class="hidden md:grid md:grid-cols-7 gap-4 mb-6">
+        <img src="../assets/img-playstore_1.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_2.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_3.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_4.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_5.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_6.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/img-playstore_7.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+      </div>
+
+      <!-- Slider en mobile -->
+      <div class="md:hidden mb-6 flex overflow-x-auto gap-4 rounded-lg">
+        <img src="../assets/img-playstore_1.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_2.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_3.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_4.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_5.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_6.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+        <img src="../assets/img-playstore_7.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+          alt="">
+      </div>
+
+      <!-- Toggle para ficha técnica -->
+      <details class="bg-alta-bg/50 rounded-lg p-4 shadow-soft">
+        <summary class="cursor-pointer font-baloo font-bold"> Ficha técnica ASO</summary>
+        <ul class="mt-2 list-disc list-inside">
+          <li><strong>Nombre:</strong> Alta Previa - Juego para beber</li>
+          <li><strong>Categoría:</strong> Entretenimiento</li>
+          <li><strong>Etiquetas:</strong> Entretenimiento, Humor, Social</li>
+          <li><strong>Descripción corta:</strong> Juegos para beber y tener Alta Previa! Incluye verdad o reto, yo nunca
+            y más.</li>
+          <li><strong>Descripción larga:</strong> ¡Abrió Alta Previa! Se utilizan tarjetas con diferentes juegos al
+            azar, individuales y grupales. Customizalo como quieras! Elegí juegos y nivel de picante. Tranqui, sin
+            anuncios molestos. Próximas actualizaciones: Tienda, Logros y Pase. Apoyamos el consumo responsable.</li>
+          <li><strong>Keywords:</strong> Verdad o reto, Yo Nunca, Preguntas picantes, Yo nunca nunca picante, Juegos
+            para previas, Juego para beber, Juego para tomar, Juegos para tomar alcohol</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex justify-center items-center"> <span
+      id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span> <img
+      id="lightbox-img" src="" class="max-w-[90%] max-h-[90%]" />
+    <button id="prev-img"
+      class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10094;</button>
+    <button id="next-img"
+      class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10095;</button>
+  </div>
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-alta-text/60">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <span>2023 Alta Previa — Maibel Romero</span>
+      <div class="flex gap-4">
+        <a href="../portfolio.html" class="hover:underline">Más proyectos</a>
+        <a href="../index.html" class="hover:underline">CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Lightbox para imágenes
+    const images = document.querySelectorAll('img.cursor-pointer');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentImg = 0;
+
+    images.forEach((img, idx) => {
+      img.addEventListener('click', () => {
+        currentImg = idx;
+        lightboxImg.src = images[currentImg].src;
+        lightbox.classList.remove('hidden');
+      });
+    });
+
+    document.getElementById('close-lightbox').onclick = () => lightbox.classList.add('hidden');
+    document.getElementById('prev-img').onclick = () => {
+      currentImg = (currentImg - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentImg].src;
+    };
+    document.getElementById('next-img').onclick = () => {
+      currentImg = (currentImg + 1) % images.length;
+      lightboxImg.src = images[currentImg].src;
+    };
+
+    //Flechas del slider de videos
+    const slider = document.getElementById("videoSlider");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    const scrollAmount = slider.offsetWidth; // ancho visible
+
+    prevBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+  </script>
+</body>
+
+</html>

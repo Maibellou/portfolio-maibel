@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -34,23 +34,44 @@
   <link rel="stylesheet" href="../style_portfolio.css" />
 </head>
 
-<body class="bg-dgn-bg text-dgn-text font-quicksand antialiased">
+<body class="bg-dgn-bg text-dgn-text font-quicksand antialiased relative overflow-x-hidden">
 
-  <!-- Header simple (opcional) -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="../portfolio.html" class="text-dgn-text/70 hover:text-dgn-text transition">← Volver a proyectos</a>
+  <!-- FONDOS GRADIENTES -->
+  <div class="absolute -z-10 inset-0 overflow-hidden">
+    <!-- 1. Arriba izquierda -->
+    <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+    <!-- 2. Arriba derecha (más abajo) -->
+    <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+    <!-- 3. Centro izquierda (más visible en desktop) -->
+    <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+    <!-- 4. Centro derecha -->
+    <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+    <!-- 5. Abajo izquierda (más arriba) -->
+    <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+    <!-- 6. Abajo derecha (más abajo para separar) -->
+    <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+      style="background:  rgba(255,149,133,0.25)"></div>
+
+  </div>
+
+  <!-- Header-->
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between ">
+    <a href="../portfolio.html" class="text-dgn-text/70 hover:text-dgn-text transition ">← Volver a proyectos</a>
     <a href="../index.html" class="text-dgn-text/70 hover:text-dgn-text transition">CV</a>
   </header>
 
   <!-- HERO -->
   <section class="relative max-w-6xl mx-auto px-6 py-10 md:py-16">
-    <!-- Fondo artístico sutil -->
-    <div class="absolute -z-10 inset-0">
-      <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full blur-3xl" style="background: rgba(255,114,92,0.22)">
-      </div>
-      <div class="absolute -bottom-16 -right-10 w-96 h-96 rounded-full blur-3xl"
-        style="background: rgba(255,149,133,0.25)"></div>
-    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
@@ -59,9 +80,10 @@
           <span class="opacity-40">•</span>
           <span>2024</span>
         </div>
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">Dognation</h1>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-dgn-primary mb-4">Dognation</h1>
         <p class="text-dgn-text/80 mb-6">
-          Diseño de branding e interfaz de una app para mejorar la experiencia de adopción y donaciones para refugios de animales.
+          Diseño de branding e interfaz de una app para mejorar la experiencia de adopción y donaciones para refugios de
+          animales.
         </p>
 
         <!-- Tags (estilo pill con branding Dognation) -->
@@ -77,92 +99,159 @@
         <!-- CTA -->
         <div class="flex flex-wrap items-center gap-3">
           <a href="#diseno"
-            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white bg-dgn-primary hover:bg-[#ff644c] transition shadow-soft">
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white bg-dgn-primary hover:bg-[#ff644c] transition shadow-soft">
             Ver prototipo
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a href="#identidad" class="text-dgn-text/70 hover:text-dgn-text transition">Ver identidad visual</a>
-        </div>
-      </div>
-
-      <!-- Lado visual del hero -->
-      <div class="flex justify-center md:justify-end">
-        <!-- Opción A: mockup móvil minimal (ya incluido) -->
-        <div class="phone flex items-center justify-center">
-          <!-- Si querés, reemplazá este SVG por un PNG/SVG de tu logo o una captura del prototipo -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" viewBox="0 0 24 24" fill="none"
-            stroke="rgba(35,35,35,0.6)" stroke-width="1.8">
-            <path d="M5 11c0-3 2.5-5.5 5.5-5.5S16 8 16 11s-2.5 5.5-5.5 5.5S5 14 5 11z" />
-            <path d="M13 13l6 6" />
-          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTEXTO -->
+  <!-- SOBRE EL PROYECTO -->
   <section id="contexto" class="max-w-6xl mx-auto px-5 py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Contexto</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-dgn-primary mb-4">Sobre el proyecto</h2>
     <p class="text-dgn-text/80 leading-relaxed mb-6">
       Dognation es un proyecto que busca facilitar la adopción responsable y la conexión entre refugios y donantes.
-      Mi aporte se centró en el diseño de la app móvil, trabajando en la arquitectura de la información, wireframes y la
+      Mi aporte se centró en el diseño de la app móvil, trabajando en la arquitectura de la información y la
       interfaz visual, además de la identidad visual para mantener coherencia entre la aplicación y la comunicación
       digital de la marca.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div class="p-5 rounded-2xl bg-white/60 shadow-soft">
-        <p class="text-sm text-dgn-text/60 mb-1">Rol</p>
-        <p class="font-semibold">Branding & UX/UI</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-1">
+        <p class="text-sm text-alta-text/60 mb-1">Rol</p>
+        <p class="font-semibold">Branding & UX/UI Design.</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/60 shadow-soft">
-        <p class="text-sm text-dgn-text/60 mb-1">Alcance</p>
-        <p class="font-semibold">Identidad + Prototipo Mobile</p>
+      <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-1">
+        <p class="text-sm text-alta-text/60 mb-1">Alcance</p>
+        <p class="font-semibold">Identidad visual + Diseño y prototipado de la app.</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-1">
+        <p class="text-sm text-alta-text/60 mb-1">Herramientas</p>
+        <p class="font-semibold">Figma e Illustrator.</p>
       </div>
     </div>
   </section>
 
   <!-- IDENTIDAD VISUAL -->
-  <section id="identidad" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Identidad visual</h2>
+  <section id="identidad" class="max-w-6xl mx-auto px-6 py-2 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold text-dgn-primary mb-4">Identidad visual</h2>
     <p class="text-dgn-text/80 leading-relaxed mb-6">
       Manual de identidad con paleta de colores, tipografía y usos del logo.
     </p>
 
-    <!-- Drive embebido (usar /preview para iframe) -->
-    <div class="responsive-embed mb-2">
-      <iframe src="https://drive.google.com/file/d/1HaE1j0ASHQnydFSzz6y11hcbUI8fLJsi/preview" allow="autoplay"></iframe>
+    <!-- PDF -->
+    <div id="pdfViewer" class="w-full max-w-6xl h-[600px] overflow-y-auto rounded-lg mx-auto"></div>
+
+    <!-- Botón Ver PDF -->
+    <div class="items-center flex flex-col gap-4">
+      <a href="../assets/dognation_manual_de_Identidad.pdf" target="_blank"
+        class="inline-flex items-center gap-2 px-5 py-3 my-5 rounded-full text-white bg-dgn-primary hover:bg-[#ff644c] transition shadow-soft">
+        Ver PDF <span class="font-bold">→</span>
+      </a>
     </div>
+
   </section>
 
   <!-- DISEÑO / PROTOTIPO -->
-  <section id="diseno" class="max-w-6xl mx-auto px-6 py-10 md:py-16">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Diseño — Prototipo interactivo</h2>
+  <section id="diseno" class="max-w-6xl mx-auto px-6 py-2 md:py-3">
+    <h2 class="text-2xl md:text-3xl font-bold text-dgn-primary mb-4">Diseño — Prototipo interactivo</h2>
     <p class="text-dgn-text/80 leading-relaxed mb-6">
       Prototipo navegable de la app en Figma. Recomendado ver en modo pantalla completa.
     </p>
+    <div class="flex flex-col items-center gap-4 w-full">
 
-    <div class="flex justify-center">
-      <iframe style="border: 1px solid rgba(0,0,0,0.1); width: 375px; height: 820px;" class="shadow-soft rounded-2xl"
-        src="https://embed.figma.com/proto/UAqzj7Qd766Y2SBNj0ijMw/Dognation?page-id=0%3A1&node-id=254-1335&p=f&viewport=-273%2C-4795%2C0.51&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A1335&show-proto-sidebar=1&embed-host=share&hide-ui=1"
-        allowfullscreen>
-      </iframe>
-    </div>
+      <!-- Mockup celular -->
+
+      <div class="flex flex-col items-center gap-4">
+
+        <!-- Contenedor clickable -->
+        <a href="https://www.figma.com/proto/UAqzj7Qd766Y2SBNj0ijMw/Dognation?page-id=0%3A1&node-id=254-1335&viewport=390%2C411%2C0.34&t=w1QCUBPyZdT33y4D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A1335&show-proto-sidebar=1"
+          target="_blank"
+          class="relative group phone flex items-center justify-center overflow-hidden rounded-[2.5rem] shadow-xl">
+
+          <!-- Imagen del mockup -->
+          <img src="../assets/dognation_mockup.png" alt="Mockup Dognation" class="w-320 h-auto object-cover">
+
+          <!-- Overlay hover -->
+          <div
+            class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white text-lg font-semibold">Ver prototipo</span>
+          </div>
+        </a>
+
+        <!-- CTA -->
+        <a href="https://www.figma.com/proto/UAqzj7Qd766Y2SBNj0ijMw/Dognation?page-id=0%3A1&node-id=254-1335&viewport=390%2C411%2C0.34&t=w1QCUBPyZdT33y4D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=254%3A1335&show-proto-sidebar=1"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white bg-dgn-primary hover:bg-[#ff644c] transition shadow-soft">
+          Abrir prototipo
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
   </section>
 
   <!-- Footer simple -->
   <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-dgn-text/60">
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      <span>© 2024 Dognation — Case Study por Maibel Romero</span>
+      <span>2024 Dognation — Maibel Romero</span>
       <div class="flex gap-4">
-        <a href="portfolio.html" class="hover:underline">Más proyectos</a>
-        <a href="index.html" class="hover:underline">CV</a>
+        <a href="../portfolio.html" class="hover:underline">Más proyectos</a>
+        <a href="../index.html" class="hover:underline">CV</a>
       </div>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+    const url = "../assets/dognation_manual_de_Identidad.pdf";
+
+    const loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(async function (pdf) {
+      const container = document.getElementById("pdfViewer");
+      const devicePixelRatio = window.devicePixelRatio || 1; // para alta resolución
+
+      for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+        const page = await pdf.getPage(pageNumber);
+
+        const canvas = document.createElement("canvas");
+        canvas.classList.add("mb-4", "shadow-md", "rounded-lg", "mx-auto", "block");
+        container.appendChild(canvas);
+
+        const context = canvas.getContext("2d");
+
+        // Viewport inicial
+        const viewport = page.getViewport({ scale: 1 });
+
+        // Escala según ancho contenedor y devicePixelRatio para mayor nitidez
+        const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+        const scaledViewport = page.getViewport({ scale });
+
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        // Ajuste CSS para que se adapte al contenedor y tenga alto máximo
+        canvas.style.width = "100%";
+        canvas.style.height = "auto";
+
+        await page.render({
+          canvasContext: context,
+          viewport: scaledViewport,
+        }).promise;
+      }
+    });
+  </script>
 
 </body>
 

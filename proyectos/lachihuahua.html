@@ -7,6 +7,9 @@
     <title>La Chihuahua</title>
 
     <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CDN -->
@@ -15,7 +18,10 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { quicksand: ['Quicksand', 'sans-serif'] },
+                    fontFamily: {
+                        quicksand: ['Quicksand', 'sans-serif'],
+                        modak: ['Modak', 'sans-serif'],
+                    },
                     colors: {
                         ch: {
                             moka: '#721800',
@@ -33,7 +39,35 @@
     <link rel="stylesheet" href="../style_portfolio.css" />
 </head>
 
-<body class="bg-ch-bg text-ch-text font-quicksand antialiased">
+<body class="bg-ch-bg text-ch-text font-quicksand antialiased relative overflow-x-hidden">
+
+    <!-- FONDOS GRADIENTES -->
+    <div class="absolute -z-10 inset-0 overflow-hidden">
+        <!-- 1. Arriba izquierda -->
+        <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.35)"></div>
+
+        <!-- 2. Arriba derecha (más abajo) -->
+        <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.40)"></div>
+
+        <!-- 3. Centro izquierda (más visible en desktop) -->
+        <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.30)"></div>
+
+        <!-- 4. Centro derecha -->
+        <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.3)"></div>
+
+        <!-- 5. Abajo izquierda (más arriba) -->
+        <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.25)"></div>
+
+        <!-- 6. Abajo derecha (más abajo para separar) -->
+        <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+            style="background: rgba(199,110,84,0.3)"></div>
+
+    </div>
 
     <!-- Header -->
     <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -42,14 +76,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="relative max-w-6xl mx-auto px-6 py-10 md:py-16">
-        <!-- fondos sutiles -->
-        <div class="absolute -z-10 inset-0">
-            <div class="absolute -top-24 -left-12 w-64 h-64 rounded-full blur-3xl"
-                style="background: rgba(199,110,84,0.4)"></div>
-            <div class="absolute -bottom-16 -right-6 w-96 h-96 rounded-full blur-3xl"
-                style="background: rgba(199,110,84,0.3)"></div>
-        </div>
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
@@ -60,14 +87,14 @@
                     <span>2025</span>
                 </div>
 
-                <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
-                    La Chihuahua — Ecommerce & Branding
+                <h1 class="text-4xl md:text-5xl leading-tight mb-2 font-modak">
+                    La Chihuahua
                 </h1>
 
                 <p class="text-ch-text/80 mb-6">
-                    Diseño y desarrollo web para un restaurante de comida rápida. Rediseñé la identidad visual y realicé
-                    la implementación front-end del ecommerce para que la experiencia sea ágil y cercana al cliente,
-                    además de fácil de administrar para el restaurante.
+                    Diseño y desarrollo web para el restaurante La Chihuahua, con un rediseño completo de la identidad
+                    visual y un
+                    sitio intuitivo y cercano, pensado para facilitar los pedidos y la gestión del restaurante.
                 </p>
 
                 <!-- Tags (pills con color de marca) -->
@@ -85,7 +112,7 @@
                 <!-- CTA -->
                 <div class="flex flex-wrap items-center gap-3">
                     <a href="#video"
-                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white bg-ch-moka hover:bg-[#5f1600] transition shadow-soft">
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white bg-ch-moka hover:bg-[#5f1600] transition shadow-soft">
                         Ver demo
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -96,116 +123,208 @@
                     <!--<a href="#sobre" class="text-ch-text/70 hover:text-ch-text transition">Más sobre el proyecto</a> -->
                 </div>
             </div>
-
-            <!-- Lado visual del hero -->
-            <div class="flex justify-center md:justify-end">
-                <!-- Opción A: mockup móvil minimal (ya incluido) -->
-                <div class="phone flex items-center justify-center">
-                    <!-- Si querés, reemplazá este SVG por un PNG/SVG de tu logo o una captura del prototipo -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" viewBox="0 0 24 24" fill="none"
-                        stroke="rgba(35,35,35,0.6)" stroke-width="1.8">
-                        <path d="M5 11c0-3 2.5-5.5 5.5-5.5S16 8 16 11s-2.5 5.5-5.5 5.5S5 14 5 11z" />
-                        <path d="M13 13l6 6" />
-                    </svg>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- SOBRE EL PROYECTO (antes 'Contexto') -->
     <section id="sobre" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Sobre el proyecto</h2>
+        <h2 class="text-3xl md:text-4xl font-modak mb-4">Sobre el proyecto</h2>
 
         <p class="text-ch-text/80 leading-relaxed mb-6">
-            La Chihuahua necesitaba una presencia web funcional y optimizada para pedidos en línea. Me encargué del
-            <strong>rediseño de marca</strong> (aplicado a piezas digitales) y del <strong>desarrollo completo del
-                ecommerce</strong>, priorizando una experiencia clara, veloz y coherente con el ambiente cálido y
-            cercano del local.
+            La Chihuahua es un restaurante de comida rápida ubicado en Nezahualcóyotl, México. El rediseño de la
+            marca trasladó la calidez y cercanía del local al entorno digital, generando una experiencia online
+            coherente con la personalidad del restaurante.
+        </p>
+        <p>
+            Mi rol abarcó re-branding aplicado a piezas digitales, diseño UX/UI y desarrollo completo del sitio.
+            El proyecto incluyó un sistema de menú dinámico conectado a una hoja de cálculo, que permite
+            actualizar productos, descripciones e imágenes de manera sencilla. Los pedidos se integran con
+            WhatsApp, facilitando que el restaurante los reciba y gestione de forma práctica. También implementé
+            la validación de zonas de entrega mediante Google Maps API (Google Cloud), ofreciendo a los usuarios
+            información clara.
         </p>
 
-        <!-- Cards resumidas (Rol / Alcance / Año) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div class="p-5 rounded-2xl bg-white/60 shadow-soft">
-                <p class="text-sm text-ch-text/60 mb-1">Rol</p>
-                <p class="font-semibold">Branding, UX/UI Design & Frontend Developer</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+            <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-1">
+                <p class="text-sm text-alta-text/60 mb-1">Rol</p>
+                <p class="font-semibold">Branding, UX/UI Design & Frontend Developer.</p>
             </div>
-            <div class="p-5 rounded-2xl bg-white/60 shadow-soft">
-                <p class="text-sm text-ch-text/60 mb-1">Alcance</p>
-                <p class="font-semibold">Ecommerce, UI, front-end, piezas gráficas</p>
+            <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-1">
+                <p class="text-sm text-alta-text/60 mb-1">Alcance</p>
+                <p class="font-semibold">Ecommerce, UI, front-end, piezas gráficas.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/60 shadow-soft md:col-span-2">
+                <p class="text-sm text-alta-text/60 mb-1">Herramientas</p>
+                <p class="font-semibold">HTML, CSS, JavaScript, Tailwind, GitHub, Vercel, Google Cloud, Illustrator.</p>
             </div>
         </div>
+
     </section>
 
     <!-- MANUAL DE IDENTIDAD (embed PDF) -->
     <section id="identidad" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Manual de identidad visual</h2>
+        <h2 class="text-3xl md:text-4xl font-modak mb-4">Manual de identidad visual</h2>
         <p class="text-ch-text/80 mb-6">Manual de marca con paleta, tipografías, ilustraciones y usos del logo.</p>
 
-        <div class="responsive-embed mb-2">
-            <iframe src="https://drive.google.com/file/d/18gEQoei8JcuIMNZ-Dw7XvdowbSWgUQHu/preview"
-                allow="autoplay"></iframe>
-        </div>
-        <p class="text-sm text-ch-text/60">Si no carga, <a class="underline"
-                href="https://drive.google.com/file/d/18gEQoei8JcuIMNZ-Dw7XvdowbSWgUQHu/view?usp=sharing"
-                target="_blank" rel="noopener">abrilo en una nueva pestaña</a>.</p>
+        <!-- PDF -->
+        <div id="pdfViewer1" class="w-full max-w-6xl h-[600px] overflow-y-auto rounded-lg mx-auto"></div>
     </section>
 
-    <!-- VIDEO / DEMO (espacio reservado para futuro video) -->
-    <section id="video" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Demo — funcionalidad web</h2>
-        <p class="text-ch-text/80 mb-6">En este espacio se mostrará un video con la navegación del ecommerce en desktop
-            y mobile. Mientras tanto, aquí hay una vista previa reservada.</p>
+    <!-- PÁGINA WEB - ECOMMERCE -->
+    <section  class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-modak mb-4">Página ecommerce</h2>
+        <div class="justify-center">
+            <img src="../assets/laChihuahua_portada.png" alt="Captura de pantalla de La Chihuahua"
+                class="w-full rounded-lg shadow-soft mb-6 cursor-pointer">
+        </div>
+        <h3 id="video" class="text-2xl font-quicksand font-bold mb-2">Video demo</h3>
+        <p class="text-ch-text/80 mb-6">Video con la navegación del ecommerce en mobile. También se puede acceder a la
+            página desde el botón para navegarla.</p>
 
-        <div class="video-placeholder mb-4">
-            <!-- Mockup con play, reemplazar por <iframe> o <video> cuando tengas el material -->
-            <div class="play">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M5 3v18l15-9L5 3z"></path>
-                </svg>
-            </div>
+        <!-- Video Demo -->
+        <div  class="flex justify-center">
+            <video src="../assets/laChihuahua_demo.mp4" autoplay muted loop playsinline
+                class="w-auto h-[600px] object-contain rounded-2xl">
+            </video>
         </div>
 
-        <p class="text-sm text-ch-text/60">Video próximamente</p>
+        <!-- Botón -->
+        <div class="items-center flex flex-col gap-4">
+            <a href="https://la-chihuahua.vercel.app/" target="_blank"
+                class="inline-flex items-center gap-2 px-5 py-3 my-5 rounded-full font-bold text-ch-bg bg-ch-moka hover:bg-[#4C1400] transition shadow-soft">
+                Visitar ecommerce →
+            </a>
+        </div>
+
     </section>
 
     <!-- PIEZAS GRÁFICAS -->
     <section id="piezas-graficas" class="py-16">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8">Piezas gráficas</h2>
+            <h2 class="text-3xl md:text-4xl font-modak mb-2">Piezas gráficas</h2>
 
-            <div class="flex gap-8 items-start">
-                <!-- PDF incrustado -->
-                <div class="basis-2/3 rounded-lg shadow-lg overflow-hidden">
-                    <iframe src="https://drive.google.com/file/d/19GwYAz3U7jwYSuWZUTH5wLWGXfoi2WqC/preview" width="100%"
-                        height="630" allow="autoplay"></iframe>
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <!-- Columna 1: Menú -->
+                <div class="basis-2/3 flex flex-col">
+                    <h3 class="text-2xl font-quicksand font-bold mb-3">Menú</h3>
+                    <!-- PDF -->
+                    <div id="pdfViewer2" class="h-[650px] overflow-y-auto rounded-lg shadow-md"></div>
                 </div>
 
-                <!-- Lona -->
-                <div class="basis-1/3 rounded-lg shadow-lg overflow-hidden">
-                    <img src="../assets/chihuahua_lona.png" alt="Lona gráfica La Chihuahua" class="w-full h-auto">
+                <!-- Columna 2: Lona -->
+                <div class="basis-1/3 flex flex-col">
+                    <h3 class="text-2xl font-quicksand font-bold mb-3">Lona de productos</h3>
+                    <div class="h-[650px] rounded-lg shadow-lg overflow-hidden">
+                        <img src="../assets/chihuahua_lona.png" alt="Lona gráfica La Chihuahua"
+                            class="w-full h-full rounded-lg shadow-soft cursor-pointer">
+                    </div>
                 </div>
             </div>
 
-            <!-- Banner abajo -->
-            <div class="mt-8 rounded-lg shadow-lg overflow-hidden">
-                <img src="../assets/chihuahua_banner.png" alt="Banner gráfico La Chihuahua" class="w-full h-auto">
+            <!-- Banner -->
+            <div class="mt-8">
+                <h3 class="text-2xl font-quicksand font-bold mb-3">Menú Banner</h3>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="../assets/chihuahua_banner.png" alt="Banner gráfico La Chihuahua"
+                        class="w-full h-auto rounded-lg shadow-soft cursor-pointer">
+                </div>
             </div>
+
         </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex justify-center items-center">
+        <span id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%]" />
+        <button id="prev-img"
+            class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10094;</button>
+        <button id="next-img"
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10095;</button>
+    </div>
 
 
     <!-- Footer -->
     <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-ch-text/60">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <span>© 2025 La Chihuahua — Trabajo de Maibel Romero</span>
+            <span>2025 La Chihuahua — Maibel Romero</span>
             <div class="flex gap-4">
-                <a href="portfolio.html" class="hover:underline">Más proyectos</a>
-                <a href="index.html" class="hover:underline">CV</a>
+                <a href="../portfolio.html" class="hover:underline">Más proyectos</a>
+                <a href="../index.html" class="hover:underline">CV</a>
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+        // Función reutilizable para renderizar un PDF
+        async function renderPDF(url, containerId) {
+            const container = document.getElementById(containerId);
+            const devicePixelRatio = window.devicePixelRatio || 1;
+
+            const loadingTask = pdfjsLib.getDocument(url);
+            const pdf = await loadingTask.promise;
+
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                const page = await pdf.getPage(pageNumber);
+
+                const canvas = document.createElement("canvas");
+                canvas.classList.add("mb-4", "shadow-md", "rounded-lg", "mx-auto", "block");
+                container.appendChild(canvas);
+
+                const context = canvas.getContext("2d");
+
+                const viewport = page.getViewport({ scale: 1 });
+                const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+                const scaledViewport = page.getViewport({ scale });
+
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+
+                // Ajuste CSS para que se adapte al contenedor
+                canvas.style.width = "100%";
+                canvas.style.height = "auto";
+
+                await page.render({
+                    canvasContext: context,
+                    viewport: scaledViewport,
+                }).promise;
+            }
+        }
+
+        // Renderizar los dos PDFs
+        renderPDF("../assets/chihuahua_manualIdentidad.pdf", "pdfViewer1");
+        renderPDF("../assets/chihuahua_menu.pdf", "pdfViewer2");
+    </script>
+    <script>
+        // Lightbox para imágenes
+        const images = document.querySelectorAll('img.cursor-pointer');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let currentImg = 0;
+
+        images.forEach((img, idx) => {
+            img.addEventListener('click', () => {
+                currentImg = idx;
+                lightboxImg.src = images[currentImg].src;
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('close-lightbox').onclick = () => lightbox.classList.add('hidden');
+        document.getElementById('prev-img').onclick = () => {
+            currentImg = (currentImg - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentImg].src;
+        };
+        document.getElementById('next-img').onclick = () => {
+            currentImg = (currentImg + 1) % images.length;
+            lightboxImg.src = images[currentImg].src;
+        };
+    </script>
 
 </body>
 

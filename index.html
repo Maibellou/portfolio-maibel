@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Currículum</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -28,33 +28,55 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-dark-purple text-white font-ubuntu mb-10">
+<body class="bg-dark-purple text-white font-ubuntu py-10 relative">
   <!-- Fondos artísticos -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-0 left-0 w-96 h-96 bg-aquamarine/30 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-5 right-0 w-96 h-96 bg-electric-purple/30 rounded-full blur-3xl"></div>
+  <div class="absolute -z-10 inset-0 overflow-hidden">
+    <!-- 1. Arriba izquierda -->
+    <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(127, 255, 212, 0.4)"></div> <!-- aquamarine -->
+
+    <!-- 2. Arriba derecha -->
+    <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+      style="background: rgba(191,0,255,0.3)"></div> <!-- electric purple -->
+
+    <!-- 3. Centro izquierda -->
+    <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(191,0,255,0.2)"></div> <!-- aquamarine -->
+
+    <!-- 4. Centro derecha -->
+    <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(127,255,212,0.2)"></div> <!-- electric purple -->
+
+    <!-- 5. Abajo izquierda -->
+    <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+      style="background: rgba(127,255,212,0.2)"></div> <!-- aquamarine -->
+
+    <!-- 6. Abajo derecha -->
+    <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+      style="background: rgba(191,0,255,0.2)"></div> <!-- electric purple -->
   </div>
+
 
   <header class="flex flex-col sm:flex-row items-center justify-between px-6 py-6 max-w-5xl mx-auto">
     <div class="mt-6 sm:mt-0 sm:w-1/3 flex justify-center">
       <img src="assets/perfil.png" alt="Foto de perfil de Maibel" class="w-40 h-40 object-cover rounded-full shadow-lg">
     </div>
 
-    <div class="text-left sm:w-2/3 sm:ml-6 space-y-2">
-      <h1 class="text-3xl font-bold">Maibel Romero</h1>
-      <h2 class="text-lg italic -mt-1">Diseñadora y artista multimedial</h2>
-      <p class="text-lg mt-2 mb-8">
+    <div class="text-left sm:w-2/3 sm:ml-6">
+      <h1 class="text-3xl font-bold mb-2">Maibel Romero</h1>
+      <h2 class="text-lg italic -mt-1 mb-4">Diseñadora y artista multimedial</h2>
+      <p class="text-lg mt-2 mb-5">
         Exploro la creatividad a través del diseño, la tecnología y el arte. Transformo ideas en experiencias visuales
         que habitan entre la sensibilidad artística y el enfoque tecnológico.
       </p>
-      <div>
-      <a class="border border-aquamarine text-aquamarine px-4 py-2 rounded-full text-xs sm:text-sm font-medium"
-      href="portfolio.html">Ver Proyectos</a>
+      <div class="mt-5">
+        <a class="bg-aquamarine text-dark-purple px-8 py-3 rounded-full text-lg font-bold hover:scale-105 "
+          href="portfolio.html">
+          Ver Portfolio
+        </a>
       </div>
     </div>
-  
   </header>
-
 
   <section class="max-w-5xl mx-auto px-6">
     <h2 class="text-3xl font-bold mb-4">Skills</h2>
@@ -245,17 +267,19 @@
             <h4 class="text-lg font-bold text-white mb-0">Diseñadora UX/UI & Estratega de Marca</h4>
             <p class="text-sm italic text-gray-400 mb-1">Dognation (App Mobile)</p>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Desarrollo de marca, identidad visual y diseño UX/UI para una app que conectaba donantes con refugios de
+              Desarrollo de marca, identidad visual y diseño UX/UI con prototipado para una app que conectaba donantes
+              con refugios de
               animales.
             </p>
           </div>
 
-          <!-- Fotografía -->
+          <!-- La Chihuahua -->
           <div>
-            <h4 class="text-lg font-bold text-white mb-0">Fotógrafa</h4>
-            <p class="text-sm italic text-gray-400 mb-1">Autogestión & colaboraciones</p>
+            <h4 class="text-lg font-bold text-white mb-0">Diseñadora UX/UI & Desarrollo Frontnd</h4>
+            <p class="text-sm italic text-gray-400 mb-1">La Chihuahua (Ecommerce)</p>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Cobertura de conciertos, retratos artísticos y fotografía de producto.
+              Rediseño de indentidad visual, diseño UX/UI y desarrollo web completo del ecommerce para el restaurante La
+              Chihuahua.
             </p>
           </div>
 
@@ -277,10 +301,18 @@
               Estrategia y creación de contenidos, gestión de redes sociales y fotografía de producto.
           </div>
 
+          <!-- Fotografía -->
+          <div>
+            <h4 class="text-lg font-bold text-white mb-0">Fotógrafa</h4>
+            <p class="text-sm italic text-gray-400 mb-1">Autogestión & colaboraciones</p>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Cobertura de conciertos, retratos artísticos y fotografía de producto.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
-
     <script src="script.js"></script>
 </body>
 

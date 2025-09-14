@@ -60,7 +60,7 @@
      height: 480px;
      border-radius: 28px;
      border: 2px solid rgba(35, 35, 35, 0.08);
-     background: linear-gradient(160deg, rgba(255, 114, 92, 0.18), rgba(255, 149, 133, 0.18));
+     /*background: linear-gradient(160deg, rgba(255, 114, 92, 0.18), rgba(255, 149, 133, 0.18));*/
      backdrop-filter: blur(6px);
      box-shadow: 0 12px 40px rgba(35, 35, 35, 0.10);
      overflow: hidden;
