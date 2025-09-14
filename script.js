@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       labels: ['Photoshop', 'Illustrator', 'Lightroom', 'After Effects', 'Premiere', 'Figma', 'Reaper', 'Blender'],
       datasets: [{
         data: [100, 90, 100, 60, 90, 95, 50, 30],
-        backgroundColor: '#B833FF',
+        backgroundColor: '#B833FF80',
         borderRadius: 6
       }]
     }
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
   new Chart(document.getElementById('devChart').getContext('2d'), {
     ...barOptions,
     data: {
-      labels: ['HTML & CSS', 'JavaScript', 'Tailwind CSS', 'p5.js', 'VS Code', 'Git & GitHub', 'Node.js', 'TypeScript', 'Firebase'],
+      labels: ['HTML & CSS', 'JavaScript', 'Tailwind CSS', 'p5.js', 'VS Code', 'Git & GitHub', 'Node.js', 'TypeScript'],
       datasets: [{
-        data: [100, 85, 95, 95, 100, 90, 50, 40, 30],
-        backgroundColor: '#11F2CC',
+        data: [100, 85, 95, 95, 100, 90, 50, 40],
+        backgroundColor: '#11F2CC80',
         borderRadius: 6
       }]
     }
