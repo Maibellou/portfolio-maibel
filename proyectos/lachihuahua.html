@@ -184,7 +184,7 @@
         <!-- Video Demo -->
         <div  class="flex justify-center">
             <video src="../assets/laChihuahua_demo.mp4" autoplay muted loop playsinline
-                class="w-auto h-[600px] object-contain rounded-2xl">
+                class="w-auto h-[600px] object-contain rounded-2xl shadow-soft">
             </video>
         </div>
 
@@ -208,7 +208,7 @@
                 <div class="basis-2/3 flex flex-col">
                     <h3 class="text-2xl font-quicksand font-bold mb-3">Menú</h3>
                     <!-- PDF -->
-                    <div id="pdfViewer2" class="h-[650px] overflow-y-auto rounded-lg shadow-md"></div>
+                    <div id="pdfViewer2" class="h-[650px] overflow-y-auto rounded-lg shadow-soft"></div>
                 </div>
 
                 <!-- Columna 2: Lona -->
@@ -273,7 +273,7 @@
                 const page = await pdf.getPage(pageNumber);
 
                 const canvas = document.createElement("canvas");
-                canvas.classList.add("mb-4", "shadow-md", "rounded-lg", "mx-auto", "block");
+                canvas.classList.add("mb-4", "shadow-soft", "rounded-lg", "mx-auto", "block");
                 container.appendChild(canvas);
 
                 const context = canvas.getContext("2d");

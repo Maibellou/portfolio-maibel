@@ -77,3 +77,27 @@
      border-radius: 9999px;
      background: rgba(35, 35, 35, 0.12);
  }
+
+ /* Scrollbars más discretos */
+.scroll-custom::-webkit-scrollbar {
+  width: 6px; /* más finita */
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: transparent; /* sin fondo */
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3); /* color gris translúcido */
+  border-radius: 9999px; /* redondeada */
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+/* Para Firefox */
+.scroll-custom {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.3) transparent;
+}

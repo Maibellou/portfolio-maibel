@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Proyecto Hexagramia</title>
+
+    <!-- Tipografías Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/peb6eoi.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nasalization: ['nasalization', 'sans-serif'],
+                        sofia: ['sofia-pro-soft', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#11072F',
+                            text: '#FFFFFF',
+                            principal: '#00BAB6',
+                            secundario: '#A846C0',
+                            accent: '#06F85A'
+                        }
+                    },
+                    boxShadow: { 'soft': '0 10px 30px rgba(0,0,0,0.25)' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style_portfolio.css" />
+</head>
+
+<body class="bg-brand-bg text-brand-text font-sofia antialiased relative overflow-x-hidden">
+
+    <!-- FONDOS GRADIENTES -->
+    <div class="absolute -z-10 inset-0 overflow-hidden">
+        <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(0,186,182,0.25)"></div>
+        <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+            style="background: rgba(168,70,192,0.35)"></div>
+        <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(6,248,90,0.25)"></div>
+        <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(0,186,182,0.3)"></div>
+        <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+            style="background: rgba(168,70,192,0.25)"></div>
+        <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+            style="background: rgba(6,248,90,0.3)"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <a href="../portfolio.html" class="text-brand-text/70 hover:text-brand-text transition font-bold">← Volver a
+            proyectos</a>
+        <a href="../index.html" class="text-brand-text/70 hover:text-brand-text transition font-bold">CV</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <div class="inline-flex items-center gap-3 text-sm text-brand-text/80 mb-2">
+                    <span class="font-semibold">Diseño UX/UI & Branding</span>
+                    <span class="opacity-60">•</span>
+                    <span>2024</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl leading-tight mb-2 font-nasalization">
+                    HEXAGRAMIA
+                </h1>
+
+                <p class="text-brand-text/80 mb-3">
+                    Branding y diseño UX/UI de la app, landing page, emails y filtros de realidad aumentada. Además
+                    generación de imagenes y microanimaciones.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">Branding</span>
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">Diseño UX/UI</span>
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">Landing
+                        Web</span>
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">Diseño
+                        Email</span>
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">Filtros
+                        AR</span>
+                    <span
+                        class="border border-brand-accent text-brand-accent px-4 py-2 rounded-full text-sm font-medium">IA
+                        Creativa</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="#pantallas" class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-brand-bg 
+           bg-gradient-to-t from-brand-principal to-brand-accent 
+           hover:opacity-90 transition shadow-soft">
+                        Ver diseño App
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE EL PROYECTO -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-nasalization mb-4">Sobre el proyecto</h2>
+
+        <p>
+            Hexagramia es una aplicación de música que combina creatividad y tecnología.
+            Su propuesta se centra en dar a los usuarios la posibilidad de transformar canciones
+            con voces de artistas mediante inteligencia artificial, explorar un catálogo de fusiones
+            y generar sus propias versiones personalizadas.</p><br>
+        <p>
+            Mi aporte comenzó desde la concepción de la marca: desarrollé el branding y la
+            identidad visual de cero, creando un lenguaje gráfico único. Diseñé el UX/UI de
+            la app en Figma, tanto en mobile como en desktop, y construí un completo UI Kit. Generé imagenes con
+            inteligencia artificial (Stable Diffusion) y realicé microanimaciones.
+            Además, diseñé la landing page, los emails transaccionales en Brevo y un filtro
+            interactivo de realidad aumentada con audio para Instagram y Facebook utilizando Spark AR.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+            <div class="p-5 rounded-2xl bg-white/10 shadow-soft md:col-span-1">
+                <p class="text-sm text-brand-text/60 mb-1">Rol</p>
+                <p class="font-semibold">Branding & UX/UI Design.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/10 shadow-soft md:col-span-1">
+                <p class="text-sm text-brand-text/60 mb-1">Alcance</p>
+                <p class="font-semibold">App, Landing, Emails, AR, Identidad Visual.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/10 shadow-soft md:col-span-2">
+                <p class="text-sm text-brand-text/60 mb-1">Herramientas</p>
+                <p class="font-semibold">Figma, Brevo, Spark AR, Stable Diffusion, Adobe Suite (Ps, Ai, Ae, Me).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MANUAL DE IDENTIDAD -->
+    <section id="identidad" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-nasalization mb-4">Manual de identidad visual</h2>
+        <p class="text-brand-text/80 mb-6">Manual de marca con paleta, tipografías, ilustraciones y usos del logo.</p>
+        <div id="pdfViewer1"
+            class="w-full max-w-6xl h-[600px] overflow-y-auto rounded-lg mx-auto scroll-custom shadow-soft"></div>
+    </section>
+
+    <!-- PÁGINA WEB -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-nasalization mb-4">Landing page</h2>
+        <div class="justify-center">
+            <img src="../assets/hexagramia_portada_desktop.png" alt="Captura de pantalla de la landing page"
+                class="w-full rounded-lg shadow-soft mb-6 cursor-pointer">
+        </div>
+        <h3 id="video" class="text-2xl font-sofia font-bold mb-2">Video demo - Landing</h3>
+
+        <div class="flex justify-center">
+            <div class="shadow-soft py-2 rounded-2xl bg-brand-bg">
+                <video src="../assets/Hexagramia_demo.mp4" autoplay muted loop playsinline
+                    class="w-auto h-[600px] object-contain"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección PANTALLAS APP -->
+    <section id="pantallas" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <!-- Título y párrafo -->
+        <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-nasalization mb-4">Diseño de la app móvil</h2>
+            <p class="text-gray-600">Estas son algunas de las pantallas seleccionadas de la app móvil.</p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper py-8 px-2">
+                    <!-- 17 imágenes -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/tutorial1.png" alt="Pantalla tutorial 1"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/tutorial2.png" alt="Pantalla tutorial 2"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/tutorial3.png" alt="Pantalla tutorial 3"
+                                class="w-full h-auto object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/tutorial4.png" alt="Pantalla tutorial 4"
+                                class="w-full h-auto object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar1.png" alt="Pantalla generar 1"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar2.png" alt="Pantalla generar 2"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar3.png" alt="Pantalla generar 3"
+                                class="w-full h-auto object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar4.png" alt="Pantalla generar 4"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar5.png" alt="Pantalla generar 5"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar_no.png" alt="Pantalla generar no"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/generar_si.png" alt="Pantalla generar sí"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/explorar1.png" alt="Pantalla explorar 1"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/explorar2.png" alt="Pantalla explorar 2"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/explorar3.png" alt="Pantalla explorar 3"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/reproductor.png" alt="Pantalla reproductor"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/menu.png" alt="Pantalla menú"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
+                            <img src="../assets/hexa/perfil.png" alt="Pantalla perfil"
+                                class="w-full h-full object-contain object-top cursor-pointer" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Flechas -->
+            <div class="swiper-button-prev !text-white !-left-10"></div>
+            <div class="swiper-button-next !text-white !-right-10"></div>
+
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex justify-center items-center">
+        <span id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%]" />
+        <button id="prev-img"
+            class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer">&#10094;</button>
+        <button id="next-img"
+            class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-brand-text/60">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <span>2024 — Maibel Romero</span>
+            <div class="flex gap-4">
+                <a href="../portfolio.html" class="hover:underline font-bold">Más proyectos</a>
+                <a href="../index.html" class="hover:underline font-bold">CV</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+        async function renderPDF(url, containerId) {
+            const container = document.getElementById(containerId);
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            const loadingTask = pdfjsLib.getDocument(url);
+            const pdf = await loadingTask.promise;
+
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                const page = await pdf.getPage(pageNumber);
+                const canvas = document.createElement("canvas");
+                canvas.classList.add("mb-4", "shadow-soft", "rounded-lg", "mx-auto", "block");
+                container.appendChild(canvas);
+                const context = canvas.getContext("2d");
+                const viewport = page.getViewport({ scale: 1 });
+                const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+                const scaledViewport = page.getViewport({ scale });
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+                canvas.style.width = "100%";
+                canvas.style.height = "auto";
+                await page.render({ canvasContext: context, viewport: scaledViewport }).promise;
+            }
+        }
+        renderPDF("../assets/hexagramia_IdentidadVisual.pdf", "pdfViewer1");
+        renderPDF("../assets/portfolio_mockups.pdf", "pdfViewer2");
+    </script>
+
+    <!-- Lightbox -->
+    <script>
+        // Lightbox
+        const images = document.querySelectorAll('img.cursor-pointer');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let currentImg = 0;
+
+        images.forEach((img, idx) => {
+            img.addEventListener('click', () => {
+                currentImg = idx;
+                lightboxImg.src = images[currentImg].src;
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('close-lightbox').onclick = () => lightbox.classList.add('hidden');
+        document.getElementById('prev-img').onclick = () => {
+            currentImg = (currentImg - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentImg].src;
+        };
+        document.getElementById('next-img').onclick = () => {
+            currentImg = (currentImg + 1) % images.length;
+            lightboxImg.src = images[currentImg].src;
+        };
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 16, //  espacio entre slides
+            centeredSlides: false, //  elimina el margen extra
+            pagination: false, //  desactiva la paginación
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: { // Tablet
+                    slidesPerView: 3,
+                },
+                1024: { // Desktop
+                    slidesPerView: 5,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
