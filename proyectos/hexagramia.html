@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
     <meta charset="utf-8" />
@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="../style_portfolio.css" />
 </head>
 
-<body class="bg-brand-bg text-brand-text font-sofia antialiased relative overflow-x-hidden">
+<body class="bg-brand-bg text-brand-text font-sofia antialiased relative">
 
     <!-- FONDOS GRADIENTES -->
     <div class="absolute -z-10 inset-0 overflow-hidden">
@@ -84,7 +84,8 @@
                 </p>
 
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-lg font-bold">Diseño UX/UI • Branding • Landing Web • Diseño Email • Filtros AR • IA Creativa.</span>
+                    <span class="text-lg font-bold">Diseño UX/UI • Branding • Landing Web • Diseño Email • Filtros AR •
+                        IA Creativa.</span>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-3">
@@ -148,13 +149,13 @@
 
     <!-- PÁGINA WEB -->
     <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <!-- Screen Landing 
         <h2 class="text-3xl md:text-4xl font-nasalization mb-4">Landing page</h2>
         <div class="justify-center">
             <img src="../assets/hexagramia_portada_desktop.png" alt="Captura de pantalla de la landing page"
                 class="w-full rounded-lg shadow-soft mb-6 cursor-pointer">
-        </div>
-        <h3 id="video" class="text-2xl font-sofia font-bold mb-2">Video demo - Landing</h3>
-
+        </div> -->
+        <h2 id="video" class="text-4xl font-nasalization mb-2">Video demo - Landing</h3>
         <div class="flex justify-center">
             <div class="shadow-soft py-2 rounded-2xl bg-brand-bg">
                 <video src="../assets/Hexagramia_demo.mp4" autoplay muted loop playsinline
@@ -172,9 +173,9 @@
         </div>
 
         <!-- Swiper -->
-        <div class="relative">
+        <div class="relative overflow-visible">
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper py-8 px-2">
+                <div class="swiper-wrapper py-8">
                     <!-- 17 imágenes -->
                     <div class="swiper-slide flex justify-center">
                         <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
@@ -291,15 +292,15 @@
                     <div class="swiper-slide flex justify-center">
                         <div class="w-[200px] h-[444px] overflow-y-auto rounded-lg shadow-soft scroll-custom">
                             <img src="../assets/hexa/perfil.png" alt="Pantalla perfil"
-                                class="w-full h-full object-contain object-top cursor-pointer" />
+                                class="w-full h-auto object-contain object-top cursor-pointer" />
                         </div>
                     </div>
                 </div>
 
             </div>
             <!-- Flechas -->
-            <div class="swiper-button-prev !text-white !-left-10"></div>
-            <div class="swiper-button-next !text-white !-right-10"></div>
+            <div class="swiper-button-prev !text-white left-2 sm:!-left-10"></div>
+            <div class="swiper-button-next !text-white right-2 sm:!-right-10"></div>
 
             <!-- Paginación -->
             <div class="swiper-pagination"></div>
@@ -388,11 +389,12 @@
             lightboxImg.src = images[currentImg].src;
         };
     </script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
+            slidesPerView: "auto",
             spaceBetween: 16, //  espacio entre slides
             centeredSlides: false, //  elimina el margen extra
             pagination: false, //  desactiva la paginación
@@ -410,7 +412,5 @@
             },
         });
     </script>
-
 </body>
-
 </html>
