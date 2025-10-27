@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Aseguramos clases iniciales (por si las tocaste)
+  // Aseguramos clases iniciales (por  las tocaste)
   mobileMenu.classList.add('opacity-0', 'pointer-events-none');
 
   let menuOpen = false;
