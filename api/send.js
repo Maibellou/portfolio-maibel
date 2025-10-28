@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
     const data = await resend.emails.send({
       from: 'Contacto Web <contacto@mairomero.com.ar>', 
-      to: 'camilamaibelromero@ejemplo.com', 
+      to: 'camilamaibelromero@gmail.com', 
       subject: `Nuevo mensaje de ${nombre}`,
       html: `
         <h2>Nuevo contacto desde la web</h2>
