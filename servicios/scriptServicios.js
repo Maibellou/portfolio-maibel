@@ -81,47 +81,30 @@ const swiperPlanes = new Swiper('.swiper', {
   },
 });
 
-// FORMULARIO - Validación dinámica según canal elegido
-const radios = document.querySelectorAll("input[name='preferencia']");
-const email = document.getElementById("email");
-const whatsapp = document.getElementById("whatsapp");
-const labels = {
-  email: document.getElementById("label-email"),
-  whatsapp: document.getElementById("label-whatsapp")
-};
+// FORMULARIO 
+const form = document.getElementById('contactForm');
 
-// Función para actualizar el campo obligatorio y el estilo del botón
-function actualizarFormulario() {
-  const seleccionado = document.querySelector("input[name='preferencia']:checked").value;
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-  // Validación: solo el canal elegido es obligatorio
-  if (seleccionado === "email") {
-    email.required = true;
-    whatsapp.required = false;
-  } else {
-    email.required = false;
-    whatsapp.required = true;
-  }
+  const formData = new FormData(form);
+  const body = Object.fromEntries(formData.entries());
 
-  // Actualizar apariencia de los botones
-  Object.values(labels).forEach(label => {
-    label.classList.remove("border-teal", "text-white");
-    label.classList.add("bg-grayDark/50", "border-gray-700", "text-white");
-  });
-  labels[seleccionado].classList.add("border-teal", "text-white");
-  labels[seleccionado].classList.remove("bg-grayDark/50", "border-gray-700");
-}
+  try {
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
 
-// Ejecutar al cargar y al cambiar selección
-actualizarFormulario();
-radios.forEach(radio => {
-  radio.addEventListener("change", actualizarFormulario);
-});
-
-// Validación final al enviar el formulario
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  if (!email.checkValidity() && !whatsapp.checkValidity()) {
-    e.preventDefault();
-    alert("Por favor completá el campo según el canal elegido.");
+    if (response.ok) {
+      alert('Mensaje enviado con éxito 🎉');
+      form.reset();
+    } else {
+      alert('Hubo un error al enviar el mensaje 😕');
+    }
+  } catch (err) {
+    console.error('Error en la solicitud:', err);
+    alert('Error al conectar con el servidor.');
   }
 });
