@@ -118,10 +118,40 @@ radios.forEach(radio => {
   radio.addEventListener("change", actualizarFormulario);
 });
 
-// Validación final al enviar el formulario
-document.getElementById("contactForm").addEventListener("submit", (e) => {
+// Envío del formulario usando Resend
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // evita recargar la página
+
+  // Verificar que al menos el campo requerido según canal esté completo
   if (!email.checkValidity() && !whatsapp.checkValidity()) {
-    e.preventDefault();
     alert("Por favor completá el campo según el canal elegido.");
+    return;
+  }
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      alert("✅ ¡Mensaje enviado con éxito!");
+      form.reset();
+      actualizarFormulario(); // restaura el estado visual
+    } else {
+      const errorData = await res.json();
+      console.error("Error al enviar:", errorData);
+      alert("❌ Ocurrió un error al enviar el mensaje. Intenta nuevamente.");
+    }
+  } catch (error) {
+    console.error("Error inesperado:", error);
+    alert("⚠️ No se pudo enviar el mensaje. Verifica tu conexión o intenta más tarde.");
   }
 });
