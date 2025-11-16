@@ -1,0 +1,659 @@
+From 0b5075b4448a91d36b0e327282fb59a34d60bd22 Mon Sep 17 00:00:00 2001
+From: Maibel <camilamaibelromero@gmail.com>
+Date: Sun, 16 Nov 2025 20:31:20 -0300
+Subject: [PATCH] Eliminar cv del index. Solo queda portfolio
+
+---
+ index.html                 | 274 +++++++++++--------------------------
+ portfolio.html             | 131 ------------------
+ proyectos/altaprevia.html  |  22 +--
+ proyectos/dognation.html   |  10 +-
+ proyectos/hexagramia.html  |  10 +-
+ proyectos/lachihuahua.html |   6 +-
+ 6 files changed, 98 insertions(+), 355 deletions(-)
+ delete mode 100644 portfolio.html
+
+diff --git a/index.html b/index.html
+index 008e698..a821060 100644
+--- a/index.html
++++ b/index.html
+@@ -37,20 +37,20 @@
+       style="background: rgba(127, 255, 212, 0.4)"></div> <!-- aquamarine -->
+ 
+     <!-- 2. Arriba derecha -->
+-    <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
++    <div class="absolute top-60 -right-20 w-80 h-80 md:w-140 md:h-140 rounded-full blur-3xl"
+       style="background: rgba(191,0,255,0.3)"></div> <!-- electric purple -->
+ 
+-    <!-- 3. Centro izquierda -->
++    <!-- 3. Centro izquierda 
+     <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+-      style="background: rgba(127,255,212,0.25)"></div> <!-- aquamarine -->
++      style="background: rgba(127,255,212,0.25)"></div> --> <!-- aquamarine -->
+ 
+-    <!-- 4. Centro derecha -->
++    <!-- 4. Centro derecha
+     <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+-      style="background: rgba(191,0,255,0.25)"></div> <!-- electric purple -->
++      style="background: rgba(191,0,255,0.25)"></div>  --> <!-- electric purple -->
+ 
+-    <!-- 5. Abajo izquierda -->
++    <!-- 5. Abajo izquierda
+     <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+-      style="background: rgba(127,255,212,0.3)"></div> <!-- aquamarine -->
++      style="background: rgba(127,255,212,0.3)"></div>  --> <!-- aquamarine -->
+ 
+     <!-- 6. Abajo derecha -->
+     <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+@@ -65,226 +65,106 @@
+ 
+     <div class="text-left sm:w-2/3 sm:ml-6">
+       <h1 class="text-3xl font-bold mb-2">Maibel Romero</h1>
+-      <h2 class="text-lg italic -mt-1 mb-4">Diseñadora y artista multimedial</h2>
++      <h2 class="text-lg italic -mt-1 mb-4">UI & Visual Designer Mid. • Frontend Jr. • Tec. en Artes Multimediales</h2>
+       <p class="text-lg mt-2 mb-5">
+-        Exploro la creatividad a través del diseño, la tecnología y el arte. Transformo ideas en experiencias visuales
+-        que habitan entre la sensibilidad artística y el enfoque tecnológico.
++        Diseño interfaces y sistemas visuales que combinan estética y propósito, con una mirada artística y técnica.
+       </p>
+-      <div class="mt-5">
+-        <a class="inline-block border border-aquamarine text-aquamarine px-6 py-2 rounded-full text-lg font-bold 
+-             transform transition duration-300 hover:scale-105 hover:bg-aquamarine/20" href="portfolio.html">
+-          Ver Portfolio
+-        </a>
+-      </div>
+     </div>
+   </header>
+ 
+-  <section class="max-w-5xl mx-auto px-6">
+-    <h2 class="text-3xl font-bold mb-4">Skills</h2>
+-    <div class="flex flex-wrap gap-2">
+-      <span class="text-lg font-bold">Diseño UX & UI • Diseño gráfico • Identidad visual • Contenido para rrss • Estrategia para
+-        rrss • Edición de
+-        imagen y video • Fotografía • Edición de audio • Animación con código • Motion Graphics • Programación web •
+-        Herramientas de IA • Marketing digital • Storytelling visual • Análisis de métricas digitales • SCRUM •
+-        Kanban.</span>
+-    </div>
+-  </section>
+-  <section class="max-w-5xl mx-auto px-6 mt-10">
+-    <h2 class="text-3xl font-bold mb-5">🛠️ Herramientas y tecnología</h2>
+-    <p class="mb-6">
+-      Los gráficos reflejan mi nivel de dominio práctico de cada herramienta, en relación con mi experiencia
+-      profesional en cada área y mi capacidad para aplicar sus funciones en proyectos concretos.
+-    </p>
+-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+-      <div>
+-        <h3 class="text-2xl font-bold mb-4">🎨 Diseño & Edición <span class="text-sm font-normal italic">Semi
+-            Senior</span></h3>
+-        <canvas id="disenoChart" class="w-full h-48"></canvas>
+-      </div>
++  <section class="max-w-6xl mx-auto px-6 xl:px-0">
++    <div class="flex flex-col md:flex-row gap-8">
+ 
+-      <div>
+-        <h3 class="text-2xl font-bold mb-4">💻 Desarrollo web <span class="text-sm font-normal italic">Junior
+-            +</span></h3>
+-        <canvas id="devChart" class="w-full h-48"></canvas>
+-      </div>
+-    </div>
+-    <div class="grid md:grid-cols-2 gap-6 mt-10">
+-      <div class="w-full h-72 relative">
+-        <h3 class="text-2xl font-bold mb-2 z-10 relative">
+-          📊 Marketing Digital
+-          <span class="text-sm font-normal italic">Junior +</span>
+-        </h3>
+-        <div class="absolute inset-0 pt-10">
+-          <canvas id="marketingChart" class="w-full h-full"></canvas>
+-        </div>
++      <!-- Columna 1 -->
++      <div class="flex-1 p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
++        <h2 class="text-2xl font-bold mb-2">Skills</h2>
++        <span class="text-lg">
++          Diseño UI • Diseño visual • Branding • Fotografía • Diseño UX • Diseño web • Marketing digital • Metodologías ágiles
++        </span>
+       </div>
+ 
+-      <div class="w-full h-72 relative">
+-        <h3 class="text-2xl font-bold mb-2 z-10 relative">
+-          🤖 Inteligencia Artificial
+-          <span class="text-sm font-normal italic">Semi Senior</span>
+-        </h3>
+-        <div class="absolute inset-0 pt-10">
+-          <canvas id="iaChart" class="w-full h-full"></canvas>
+-        </div>
++      <!-- Columna 2 -->
++      <div class="flex-1 p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
++        <h2 class="text-2xl font-bold mb-2">Tools</h2>
++        <span class="text-lg">
++          Figma • Adobe Suite (Ps, Ai, Ae, Pr) • VS Code • HTML/CSS/JS • Herramientas de IA
++        </span>
+       </div>
+-    </div>
+-
+-  </section>
+-  <section class="max-w-5xl mx-auto px-6 mt-20">
+-    <h2 class="text-3xl font-bold mb-4">Formación</h2>
+-    <div class="mb-8">
+-      <h3 class="text-xl font-semibold">🎓 Licenciatura en Artes Multimediales</h3>
+-      <p class="italic">Universidad Nacional de las Artes (Argentina)</p>
+-      <p class="text-sm">Estudiante avanzado</p>
+-    </div>
+ 
+-    <div>
+-      <h3 class="text-xl font-semibold mb-4">📌 Cursos destacados</h3>
+-      <div class="flex flex-wrap gap-2">
+-        <span class="text-lg">Inbound Marketing • Storytelling • Metodologías ágiles • Design Systems • SEO y
+-          posicionamiento web • Email marketing • Copywriting persuasivo • Diseño centrado en el usuario.</span>
+-      </div>
+     </div>
+-    <section class="max-w-5xl mx-auto mt-10">
+-      <h2 class="text-3xl font-bold mb-6">Experiencia Profesional</h2>
+-
+-      <!-- Trabajos principales -->
+-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
++  </section>
+ 
+-        <!-- Utopicx -->
+-        <div class="md:col-span-7 relative group rounded-2xl p-6 border border-white/10 
+-              bg-white/5 backdrop-blur-lg shadow-lg hover:scale-105 transform transition duration-300">
++  <section class="flex flex-col items-center px-6 py-16">
++    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl w-full">
+ 
+-          <h3 class="text-xl font-bold mb-1" style="color:#B833FF;">Utopicx</h3>
+-          <p class="text-sm italic font-bold mb-1 text-white/80">Diseñadora UI/UX & Estratega de Marca</p>
+-          <p class="text-sm mb-4 text-white/80">Septiembre 2022 – Mayo 2025</p>
++      <!-- Card: Alta Previa -->
++      <a href="proyectos/altaprevia.html"
++        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
+ 
+-          <p class="text-white/70 text-sm leading-relaxed mb-2">
+-            Empresa enfocada en el desarrollo de aplicaciones web y mobile con integración de inteligencia artificial.
+-          </p>
+-          <ul class="list-disc ml-5 text-white/80 text-sm leading-relaxed space-y-1 mb-3">
+-            <li>Diseñé de <strong>interfaces centradas en el usuario (UI/UX)</strong> para páginas web, aplicaciones web
+-              y mobile, wireframes y prototipos en Figma.
+-            </li>
+-            <li>Diseñé una <strong>aplicación móvil</strong> con más de 20,000 descargas orgánicas.</li>
+-            <li>Colaboré en plataforma B2B con integración de IA de voz para la industria musical.</li>
+-            <li>Desarrollé <strong>visual y branding</strong> para productos digitales.</li>
+-            <li>Creé <strong>piezas gráficas digitales, microanimaciones y videos</strong> para multiplataformas.</li>
+-            <li>Implementé <strong>IA en procesos creativos</strong> para generación de imágenes.</li>
+-            <li>Desarrollé <strong>estrategias de marketing digital:</strong> análisis en Google Analytics, Google
+-              Search Console y Google Ads.</li>
+-            <li>Participé en <strong>desarrollo frontend</strong> con HTML, CSS, JavaScript, Tailwind y Astro.</li>
+-          </ul>
++        <div class="absolute inset-0">
++          <img src="assets/preview_AltaPrevia.jpg"
++            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
++            alt="Alta Previa preview">
+         </div>
+ 
+-        <!-- Preven Consultores -->
+-        <div class="md:col-span-5 relative group rounded-2xl p-6 border border-white/10 
+-              bg-white/5 backdrop-blur-lg shadow-lg hover:scale-105 transform transition duration-300">
+-
+-          <h3 class="text-xl font-bold mb-1" style="color:#B833FF;">Preven Consultores</h3>
+-          <p class="text-sm italic font-bold mb-1 text-white/80">Community Manager & Gestión web</p>
+-          <p class="text-sm mb-4 text-white/80">Junio 2021 – Agosto 2022</p>
+-
+-          <p class="text-white/70 text-sm leading-relaxed mb-2">
+-            Consultora especializada en seguridad e higiene industrial.
+-          </p>
+-          <ul class="list-disc ml-5 text-white/80 text-sm leading-relaxed space-y-1">
+-            <li>Administré redes sociales y diseñé <strong>estrategias digitales</strong> para dos marcas.</li>
+-            <li>Implementé y optimicé <strong>campañas en Google Ads reduciendo</strong> costos de inversión.</li>
+-            <li>Optimicé y mantuve <strong>5 sitios web</strong> en WordPress y Bootstrap.</li>
+-            <li>Produje <strong>fotografía institucional</strong> y material gráfico.</li>
+-            <li>Elaboré reportes mensuales de <strong>métricas digitales</strong>.</li>
+-            <li>Rediseñé y produje <strong>contenido visual en redes sociales</strong> que mejoró la percepción de la
+-              marca y la posicionó con una estética más profesional en el sector.</li>
+-          </ul>
++        <div class="relative z-10">
++          <h2 class="text-xl font-semibold">Alta Previa</h2>
++          <p class="text-sm text-white/80">Diseño UX/UI de la app, branding y marketing + AR.</p>
+         </div>
++      </a>
+ 
+-      </div>
+-
+-      <!-- Proyectos Destacados -->
+-      <h2 class="text-2xl font-bold mb-6">Proyectos Destacados</h2>
+-
+-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
++      <!-- Card: Hexagramia -->
++      <a href="proyectos/hexagramia.html"
++        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
+ 
+-        <!-- La Chihuahua -->
+-        <div class="md:col-span-7 relative group rounded-2xl p-6 border border-white/10 
+-        bg-white/5 backdrop-blur-lg shadow-lg hover:scale-105 transform transition duration-300">
+-
+-          <h3 class="text-xl font-bold mb-1" style="color:#B833FF;">La Chihuahua</h3>
+-          <p class="text-sm italic font-bold mb-1 text-white/80">Diseñadora UX/UI & Desarrollo Web</p>
+-          <p class="text-sm mb-4 text-white/80">Junio 2025 – Julio 2025 | México</p>
+-
+-          <p class="text-white/70 text-sm leading-relaxed mb-2">
+-            Rediseñé identidad visual y desarrollé el ecommerce del restaurante.
+-          </p>
+-          <ul class="list-disc ml-5 text-white/80 text-sm leading-relaxed space-y-1 mb-3">
+-            <li>Rediseñé la <strong>identidad visual</strong> del restaurante.</li>
+-            <li>Diseñé y desarrollé <strong>la interfaz (UI)</strong> del ecommerce.</li>
+-            <li>Implementé <strong>menú dinámico</strong> conectado a Google Sheets.</li>
+-            <li>Integré <strong>pedidos vía WhatsApp</strong> y validación de zonas de entrega con Google Maps API.</li>
+-            <li>Produje <strong>piezas gráficas complementarias</strong> (menú digital, banners).</li>
+-          </ul>
++        <div class="absolute inset-0">
++          <img src="assets/preview_Hexagramia.png"
++            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
++            alt="Hexagramia preview">
+         </div>
+ 
+-        <!-- Dognation -->
+-        <div class="md:col-span-5 relative group rounded-2xl p-6 border border-white/10 
+-        bg-white/5 backdrop-blur-lg shadow-lg hover:scale-105 transform transition duration-300">
+-
+-          <h3 class="text-xl font-bold mb-1" style="color:#B833FF;">Dognation</h3>
+-          <p class="text-sm italic font-bold mb-1 text-white/80">Diseñadora UX/UI & Branding</p>
+-          <p class="text-sm mb-4 text-white/80">Marzo 2024 – Mayo 2024 | México (Remoto)</p>
+-          <p class="text-white/70 text-sm leading-relaxed mb-2">
+-            App que conecta donantes con refugios de animales.
+-          </p>
+-          <ul class="list-disc ml-5 text-white/80 text-sm leading-relaxed space-y-1">
+-            <li>Desarrollé la <strong>identidad visual</strong> y colaboré con el <strong>branding de la marca</strong>.
+-            </li>
+-            <li>Diseñé la <strong>app móvil</strong> completa y el <strong>prototipo interactivo</strong> en Figma.</li>
+-            <li>Realicé el <strong>análisis de la competencia</strong> y la definición de perfiles de usuario
+-              (Personas).</li>
+-          </ul>
++        <div class="relative z-10">
++          <h2 class="text-xl font-semibold">Hexagramia</h2>
++          <p class="text-sm text-white/80">Diseño UX/UI de la app, branding + AR.</p>
+         </div>
++      </a>
+ 
+-      </div>
+ 
+-      <!-- Proyectos Freelance & Colaboraciones -->
+-      <h2 class="text-2xl font-bold mb-5">Proyectos Freelance</h2>
++      <!-- Card: Dognation -->
++      <a href="proyectos/dognation.html"
++        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
+ 
+-      <div class="border-l-2 border-aquamarine pl-6">
+-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
++        <div class="absolute inset-0">
++          <img src="assets/preview_Dognation.png"
++            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
++            alt="Dognation preview">
++        </div>
+ 
+-          <!-- Community Manager Ícaro -->
+-          <div>
+-            <h4 class="text-lg font-bold text-white mb-0">Community Manager</h4>
+-            <p class="text-sm italic text-gray-400 mb-1">Ícaro debe Morir (proyecto musical)</p>
+-            <p class="text-gray-300 text-sm leading-relaxed">
+-              Estrategia y creación de contenidos, gestión de redes sociales, fotografía de conciertos y campañas de
+-              publicidad en Meta Ads.
+-            </p>
+-          </div>
++        <div class="relative z-10">
++          <h2 class="text-xl font-semibold">Dognation</h2>
++          <p class="text-sm text-white/80">Diseño UX/UI de la app mobile e identidad visual.</p>
++        </div>
++      </a>
+ 
+-          <!-- Community Manager Terracó -->
+-          <div>
+-            <h4 class="text-lg font-bold text-white mb-0">Community Manager</h4>
+-            <p class="text-sm italic text-gray-400 mb-1">Terracó (cosmética natural)</p>
+-            <p class="text-gray-300 text-sm leading-relaxed">
+-              Estrategia y creación de contenidos, gestión de redes sociales y fotografía de producto.
+-          </div>
++      <!-- Card: La Chihuahua -->
++      <a href="proyectos/lachihuahua.html"
++        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
+ 
+-          <!-- Fotografía -->
+-          <div>
+-            <h4 class="text-lg font-bold text-white mb-0">Fotógrafa</h4>
+-            <p class="text-sm italic text-gray-400 mb-1">Autogestión & colaboraciones</p>
+-            <p class="text-gray-300 text-sm leading-relaxed">
+-              Cobertura de conciertos, retratos artísticos y fotografía de producto.
+-            </p>
+-          </div>
++        <div class="absolute inset-0">
++          <img src="assets/preview_LaChihuahua.png"
++            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
++            alt="La Chihuahua preview">
++        </div>
+ 
++        <div class="relative z-10">
++          <h2 class="text-xl font-semibold">La Chihuahua</h2>
++          <p class="text-sm text-white/80">Rebranding, diseño y desarrollo de ecommerce.</p>
+         </div>
+-      </div>
+-    </section>
+-    <script src="script.js"></script>
++      </a>
++
++    </div>
++  </section>
++  <script src="script.js"></script>
+ </body>
+ 
+ </html>
+\ No newline at end of file
+diff --git a/portfolio.html b/portfolio.html
+deleted file mode 100644
+index 67af4d3..0000000
+--- a/portfolio.html
++++ /dev/null
+@@ -1,131 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="es">
+-
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Portfolio - Maibel Romero</title>
+-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+-    <script src="https://cdn.tailwindcss.com"></script>
+-    <script>
+-        tailwind.config = {
+-            theme: {
+-                extend: {
+-                    fontFamily: {
+-                        ubuntu: ['Ubuntu', 'sans-serif'],
+-                    },
+-                    colors: {
+-                        'dark-purple': '#190127',
+-                        'electric-purple': '#B833FF',
+-                        'aquamarine': '#11F2CC',
+-                        'tail': '#01C4C1',
+-                        'gray': '#161616',
+-                    }
+-                }
+-            }
+-        }
+-    </script>
+-    <link rel="stylesheet" href="style_portfolio.css" />
+-</head>
+-
+-<body class="bg-gray text-white font-ubuntu relative">
+-
+-    <!-- Fondos artísticos 
+-    <div class="absolute inset-0 -z-10">
+-        <div class="absolute top-0 left-0 w-96 h-96 bg-electric-purple/30 rounded-full blur-3xl"></div>
+-        <div class="absolute bottom-10 right-0 w-96 h-96 bg-aquamarine/30 rounded-full blur-3xl"></div>
+-    </div> -->
+-
+-    <!-- Contenido principal -->
+-    <section class="flex flex-col items-center px-6 py-16">
+-        <div class="text-center mb-8">
+-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Mis Proyectos</h1>
+-            <p class="text-lg max-w-5xl mx-auto">
+-                Explorá una selección de mis proyectos favoritos que evidencian el enfoque creativo y estratégico
+-                aplicado en
+-                cada propuesta, desde la conceptualización hasta la implementación final.
+-            </p>
+-            <p> Si querés conocer más sobre mi trayectoria y experiencia profesional, te invito a revisar mi CV.
+-            </p>
+-        </div>
+-        <div class="mb-12">
+-            <a class="inline-block border border-white text-white px-6 py-2 rounded-full text-lg font-bold 
+-             transform transition duration-300 hover:scale-105" href="index.html">
+-                Ver Currículum
+-            </a>
+-        </div>
+-
+-
+-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl w-full">
+-
+-            <!-- Card: Alta Previa -->
+-            <a href="proyectos/altaprevia.html"
+-                class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-40 sm:min-h-60">
+-
+-                <div class="absolute inset-0">
+-                    <img src="assets/preview_AltaPrevia.jpg"
+-                        class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
+-                        alt="Alta Previa preview">
+-                </div>
+-
+-                <div class="relative z-10">
+-                    <h2 class="text-xl font-semibold">Alta Previa</h2>
+-                    <p class="text-sm text-white/80">Diseño UX/UI de la app, branding y marketing + AR.</p>
+-                </div>
+-            </a>
+-
+-            <!-- Card: Hexagramia -->
+-            <a href="proyectos/hexagramia.html"
+-                class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-40 sm:min-h-60">
+-
+-                <div class="absolute inset-0">
+-                    <img src="assets/preview_Hexagramia.png"
+-                        class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
+-                        alt="Hexagramia preview">
+-                </div>
+-
+-                <div class="relative z-10">
+-                    <h2 class="text-xl font-semibold">Hexagramia</h2>
+-                    <p class="text-sm text-white/80">Diseño UX/UI de la app, branding + AR.</p>
+-                </div>
+-            </a>
+-
+-
+-            <!-- Card: Dognation -->
+-            <a href="proyectos/dognation.html"
+-                class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-40 sm:min-h-60">
+-
+-                <div class="absolute inset-0">
+-                    <img src="assets/preview_Dognation.png"
+-                        class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
+-                        alt="Dognation preview">
+-                </div>
+-
+-                <div class="relative z-10">
+-                    <h2 class="text-xl font-semibold">Dognation</h2>
+-                    <p class="text-sm text-white/80">Diseño UX/UI de la app mobile e identidad visual.</p>
+-                </div>
+-            </a>
+-
+-            <!-- Card: La Chihuahua -->
+-            <a href="proyectos/lachihuahua.html"
+-                class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-40 sm:min-h-60">
+-
+-                <div class="absolute inset-0">
+-                    <img src="assets/preview_LaChihuahua.png"
+-                        class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
+-                        alt="La Chihuahua preview">
+-                </div>
+-
+-                <div class="relative z-10">
+-                    <h2 class="text-xl font-semibold">La Chihuahua</h2>
+-                    <p class="text-sm text-white/80">Rebranding, diseño y desarrollo de ecommerce.</p>
+-                </div>
+-            </a>
+-
+-        </div>
+-    </section>
+-
+-</body>
+-
+-</html>
+\ No newline at end of file
+diff --git a/proyectos/altaprevia.html b/proyectos/altaprevia.html
+index 662af19..a32676c 100644
+--- a/proyectos/altaprevia.html
++++ b/proyectos/altaprevia.html
+@@ -76,9 +76,8 @@
+ 
+   <!-- Header -->
+   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+-    <a href="../portfolio.html" class="text-alta-text/70 hover:text-alta-text transition font-bold">← Volver a
++    <a href="../index.html" class="text-alta-text/70 hover:text-alta-text transition font-bold">← Volver a
+       proyectos</a>
+-    <a href="../index.html" class="text-alta-text/70 hover:text-alta-text transition font-bold">CV</a>
+   </header>
+ 
+   <!-- HERO -->
+@@ -228,14 +227,16 @@
+   </section>
+ 
+   <!-- CAMPANAS Y MATERIALES -->
++   
+   <section id="campanas-materiales" class="max-w-6xl mx-auto px-6 py-12 md:py-20 font-nunito">
+     <h2 class="text-2xl md:text-3xl font-bold mb-4 font-baloo">Proyectos Digitales</h2>
++    <!--
+     <p class="mb-12">
+       Desarrollo de filtros de Instagram, optimización de la app en Google Play, diseño de mails y creación de
+       contenidos digitales.
+     </p>
+ 
+-    <!-- SUBSECCIÓN FILTROS DE INSTAGRAM -->
++     SUBSECCIÓN FILTROS DE INSTAGRAM 
+     <div id="filtros-instagram" class="mb-16">
+       <h3 class="text-xl font-baloo font-bold mb-2">Filtros de Instagram</h3>
+       <p class="mb-4">
+@@ -250,9 +251,9 @@
+           class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
+         <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+           class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
+-      </div>
++      </div> -->
+ 
+-      <!-- SLIDER MOBILE + TABLET -->
++      <!-- SLIDER MOBILE + TABLET 
+       <div class="relative block lg:hidden">
+         <div id="videoSlider"
+           class="overflow-x-auto flex space-x-4 snap-x snap-mandatory scrollbar-hide scroll-smooth px-4">
+@@ -262,16 +263,16 @@
+             class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
+           <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+             class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
+-        </div>
++        </div> -->
+ 
+-        <!-- Flechas -->
++        <!-- Flechas 
+         <button id="prevBtn"
+           class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10094;</button>
+         <button id="nextBtn"
+           class="absolute right-5 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-none border-none cursor-pointer">&#10095;</button>
+-      </div>
++      </div> -->
+ 
+-    </div>
++    </div> 
+ 
+     <!-- SUBSECCIÓN ASO EN GOOGLE PLAY -->
+     <div id="aso-googleplay" class="mb-16">
+@@ -343,8 +344,7 @@
+     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+       <span>2023 Alta Previa — Maibel Romero</span>
+       <div class="flex gap-4">
+-        <a href="../portfolio.html" class="hover:underline font-bold">Más proyectos</a>
+-        <a href="../index.html" class="hover:underline font-bold">CV</a>
++        <a href="../index.html" class="hover:underline font-bold">Más proyectos</a>
+       </div>
+     </div>
+   </footer>
+diff --git a/proyectos/dognation.html b/proyectos/dognation.html
+index 7074736..7649419 100644
+--- a/proyectos/dognation.html
++++ b/proyectos/dognation.html
+@@ -66,8 +66,7 @@
+ 
+   <!-- Header-->
+   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between ">
+-    <a href="../portfolio.html" class="text-dgn-text/70 hover:text-dgn-text transition font-bold">← Volver a proyectos</a>
+-    <a href="../index.html" class="text-dgn-text/70 hover:text-dgn-text transition font-bold">CV</a>
++    <a href="../index.html" class="text-dgn-text/70 hover:text-dgn-text transition font-bold">← Volver a proyectos</a>
+   </header>
+ 
+   <!-- HERO -->
+@@ -78,7 +77,7 @@
+         <div class="inline-flex items-center gap-3 text-sm text-dgn-text/70 mb-4">
+           <span class="font-semibold">App mobile</span>
+           <span class="opacity-40">•</span>
+-          <span>2024</span>
++          <span>2025</span>
+         </div>
+         <h1 class="text-3xl md:text-5xl font-bold leading-tight text-dgn-primary mb-4">Dognation</h1>
+         <p class="text-dgn-text/80 mb-6">
+@@ -195,10 +194,9 @@
+   <!-- Footer simple -->
+   <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-dgn-text/60">
+     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+-      <span>2024 Dognation — Maibel Romero</span>
++      <span>2025 Dognation — Maibel Romero</span>
+       <div class="flex gap-4">
+-        <a href="../portfolio.html" class="hover:underline font-bold">Más proyectos</a>
+-        <a href="../index.html" class="hover:underline font-bold">CV</a>
++        <a href="../index.html" class="hover:underline font-bold">Más proyectos</a>
+       </div>
+     </div>
+   </footer>
+diff --git a/proyectos/hexagramia.html b/proyectos/hexagramia.html
+index 42b9eff..7a7a9c0 100644
+--- a/proyectos/hexagramia.html
++++ b/proyectos/hexagramia.html
+@@ -59,9 +59,8 @@
+ 
+     <!-- Header -->
+     <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+-        <a href="../portfolio.html" class="text-brand-text/70 hover:text-brand-text transition font-bold">← Volver a
++        <a href="../index.html" class="text-brand-text/70 hover:text-brand-text transition font-bold">← Volver a
+             proyectos</a>
+-        <a href="../index.html" class="text-brand-text/70 hover:text-brand-text transition font-bold">CV</a>
+     </header>
+ 
+     <!-- HERO -->
+@@ -71,7 +70,7 @@
+                 <div class="inline-flex items-center gap-3 text-sm text-brand-text/80 mb-2">
+                     <span class="font-semibold">Diseño UX/UI & Branding</span>
+                     <span class="opacity-60">•</span>
+-                    <span>2024</span>
++                    <span>2025</span>
+                 </div>
+ 
+                 <h1 class="text-4xl md:text-5xl leading-tight mb-2 font-nasalization">
+@@ -322,10 +321,9 @@
+     <!-- Footer -->
+     <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-brand-text/60">
+         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+-            <span>2024 — Maibel Romero</span>
++            <span>2025 — Maibel Romero</span>
+             <div class="flex gap-4">
+-                <a href="../portfolio.html" class="hover:underline font-bold">Más proyectos</a>
+-                <a href="../index.html" class="hover:underline font-bold">CV</a>
++                <a href="../index.html" class="hover:underline font-bold">Más proyectos</a>
+             </div>
+         </div>
+     </footer>
+diff --git a/proyectos/lachihuahua.html b/proyectos/lachihuahua.html
+index c4bb4fe..64f893f 100644
+--- a/proyectos/lachihuahua.html
++++ b/proyectos/lachihuahua.html
+@@ -71,8 +71,7 @@
+ 
+     <!-- Header -->
+     <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+-        <a href="../portfolio.html" class="text-ch-text/70 hover:text-ch-text transition font-bold">← Volver a proyectos</a>
+-        <a href="../index.html" class="text-ch-text/70 hover:text-ch-text transition font-bold">CV</a>
++        <a href="../index.html" class="text-ch-text/70 hover:text-ch-text transition font-bold">← Volver a proyectos</a>
+     </header>
+ 
+     <!-- HERO -->
+@@ -242,8 +241,7 @@
+         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+             <span>2025 La Chihuahua — Maibel Romero</span>
+             <div class="flex gap-4">
+-                <a href="../portfolio.html" class="hover:underline font-bold">Más proyectos</a>
+-                <a href="../index.html" class="hover:underline font-bold">CV</a>
++                <a href="../index.html" class="hover:underline font-bold">Más proyectos</a>
+             </div>
+         </div>
+     </footer>
+-- 
+2.49.0.windows.1
+
