@@ -44,29 +44,28 @@
     <!-- FONDOS GRADIENTES -->
     <div class="absolute -z-10 inset-0 overflow-hidden">
         <!-- 1. Arriba izquierda -->
-        <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-1 -top-32 -left-16 w-72 h-72 md:w-96 md:h-96"
             style="background: rgba(199,110,84,0.35)"></div>
 
         <!-- 2. Arriba derecha (más abajo) -->
-        <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-2 top-60 -right-20 w-64 h-64 md:w-140 md:h-140"
             style="background: rgba(199,110,84,0.40)"></div>
 
         <!-- 3. Centro izquierda (más visible en desktop) -->
-        <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-3 top-1/3 left-0 w-64 h-64 md:w-96 md:h-96"
             style="background: rgba(199,110,84,0.30)"></div>
 
         <!-- 4. Centro derecha -->
-        <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-1 top-1/2 right-0 w-64 h-64 md:w-96 md:h-96"
             style="background: rgba(199,110,84,0.3)"></div>
 
         <!-- 5. Abajo izquierda (más arriba) -->
-        <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-2 bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96"
             style="background: rgba(199,110,84,0.25)"></div>
 
         <!-- 6. Abajo derecha (más abajo para separar) -->
-        <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
+        <div class="glow-blob animate-glow-3 -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem]"
             style="background: rgba(199,110,84,0.3)"></div>
-
     </div>
 
     <!-- Header -->
@@ -159,14 +158,14 @@
         <p class="text-ch-text/80 mb-6">Manual de marca con paleta, tipografías, ilustraciones y usos del logo.</p>
 
         <!-- PDF -->
-        <div id="pdfViewer1" class="w-full max-w-6xl h-[600px] overflow-y-auto rounded-lg mx-auto"></div>
+        <div id="pdfViewer1" class="w-full max-w-6xl rounded-lg mx-auto"></div>
     </section>
 
     <!-- PÁGINA WEB - ECOMMERCE -->
     <section  class="max-w-6xl mx-auto px-6 py-10 md:py-14">
         <h2 class="text-3xl md:text-4xl font-modak mb-4">Página ecommerce</h2>
         <div class="justify-center">
-            <img src="../assets/laChihuahua_portada.png" alt="Captura de pantalla de La Chihuahua"
+            <img src="../assets/lachihuahua/laChihuahua_portada.png" alt="Captura de pantalla de La Chihuahua"
                 class="w-full rounded-lg shadow-soft mb-6 cursor-pointer">
         </div>
         <h3 id="video" class="text-2xl font-quicksand font-bold mb-2">Video demo</h3>
@@ -175,7 +174,7 @@
 
         <!-- Video Demo -->
         <div  class="flex justify-center">
-            <video src="../assets/laChihuahua_demo.mp4" autoplay muted loop playsinline
+            <video src="../assets/lachihuahua/laChihuahua_demo.mp4" autoplay muted loop playsinline
                 class="w-auto h-[600px] object-contain rounded-2xl shadow-soft">
             </video>
         </div>
@@ -200,14 +199,14 @@
                 <div class="basis-2/3 flex flex-col">
                     <h3 class="text-2xl font-quicksand font-bold mb-3">Menú</h3>
                     <!-- PDF -->
-                    <div id="pdfViewer2" class="h-[650px] overflow-y-auto rounded-lg shadow-soft"></div>
+                    <div id="pdfViewer2" class="rounded-lg shadow-soft"></div>
                 </div>
 
                 <!-- Columna 2: Lona -->
                 <div class="basis-1/3 flex flex-col">
                     <h3 class="text-2xl font-quicksand font-bold mb-3">Lona de productos</h3>
                     <div class="h-[650px] rounded-lg shadow-lg overflow-hidden">
-                        <img src="../assets/chihuahua_lona.png" alt="Lona gráfica La Chihuahua"
+                        <img src="../assets/lachihuahua/chihuahua_lona.png" alt="Lona gráfica La Chihuahua"
                             class="w-full h-full rounded-lg shadow-soft cursor-pointer">
                     </div>
                 </div>
@@ -217,7 +216,7 @@
             <div class="mt-8">
                 <h3 class="text-2xl font-quicksand font-bold mb-3">Menú Banner</h3>
                 <div class="rounded-lg shadow-lg overflow-hidden">
-                    <img src="../assets/chihuahua_banner.png" alt="Banner gráfico La Chihuahua"
+                    <img src="../assets/lachihuahua/chihuahua_banner.png" alt="Banner gráfico La Chihuahua"
                         class="w-full h-auto rounded-lg shadow-soft cursor-pointer">
                 </div>
             </div>
@@ -255,41 +254,47 @@
         // Función reutilizable para renderizar un PDF
         async function renderPDF(url, containerId) {
             const container = document.getElementById(containerId);
+            if (!container) return;
             const devicePixelRatio = window.devicePixelRatio || 1;
 
-            const loadingTask = pdfjsLib.getDocument(url);
-            const pdf = await loadingTask.promise;
+            try {
+                const loadingTask = pdfjsLib.getDocument(url);
+                const pdf = await loadingTask.promise;
 
-            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-                const page = await pdf.getPage(pageNumber);
+                for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                    const page = await pdf.getPage(pageNumber);
 
-                const canvas = document.createElement("canvas");
-                canvas.classList.add("mb-4", "shadow-soft", "rounded-lg", "mx-auto", "block");
-                container.appendChild(canvas);
+                    const canvas = document.createElement("canvas");
+                    canvas.classList.add("mx-auto", "block");
+                    container.appendChild(canvas);
 
-                const context = canvas.getContext("2d");
+                    const context = canvas.getContext("2d");
 
-                const viewport = page.getViewport({ scale: 1 });
-                const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
-                const scaledViewport = page.getViewport({ scale });
+                    const viewport = page.getViewport({ scale: 1 });
+                    const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+                    const scaledViewport = page.getViewport({ scale });
 
-                canvas.width = scaledViewport.width;
-                canvas.height = scaledViewport.height;
+                    canvas.width = scaledViewport.width;
+                    canvas.height = scaledViewport.height;
 
-                // Ajuste CSS para que se adapte al contenedor
-                canvas.style.width = "100%";
-                canvas.style.height = "auto";
+                    // Ajuste CSS para que se adapte al contenedor
+                    canvas.style.width = "100%";
+                    canvas.style.height = "auto";
 
-                await page.render({
-                    canvasContext: context,
-                    viewport: scaledViewport,
-                }).promise;
+                    await page.render({
+                        canvasContext: context,
+                        viewport: scaledViewport,
+                    }).promise;
+                }
+            } catch (error) {
+                console.error("Error rendering PDF via PDF.js, using iframe fallback:", error);
+                container.innerHTML = `<iframe src="${url}#toolbar=0" class="w-full h-full rounded-lg" style="border: none; min-height: 650px;"></iframe>`;
             }
         }
 
         // Renderizar los dos PDFs
-        renderPDF("../assets/chihuahua_manualIdentidad.pdf", "pdfViewer1");
-        renderPDF("../assets/chihuahua_menu.pdf", "pdfViewer2");
+        renderPDF("../assets/lachihuahua/chihuahua_manualIdentidad.pdf", "pdfViewer1");
+        renderPDF("../assets/lachihuahua/chihuahua_menu.pdf", "pdfViewer2");
     </script>
     <script>
         // Lightbox para imágenes

@@ -49,28 +49,28 @@
   <!-- FONDOS GRADIENTES - ALTA PREVIA -->
   <div class="absolute -z-10 inset-0 overflow-hidden">
     <!-- 1. Arriba izquierda -->
-    <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(0,208,195,0.35)"></div> <!-- cyan -->
+    <div class="glow-blob animate-glow-1 -top-32 -left-16 w-96 h-96 md:w-[32rem] md:h-[32rem]"
+      style="background: rgba(0,208,195,0.08)"></div> <!-- cyan -->
 
     <!-- 2. Arriba derecha (más abajo) -->
-    <div class="absolute top-60 -right-20 w-64 h-64 md:w-140 md:h-140 rounded-full blur-3xl"
-      style="background: rgba(204,0,255,0.4)"></div> <!-- purple -->
+    <div class="glow-blob animate-glow-2 top-60 -right-20 w-[28rem] h-[28rem] md:w-[45rem] md:h-[45rem]"
+      style="background: rgba(204,0,255,0.10)"></div> <!-- purple -->
 
     <!-- 3. Centro izquierda -->
-    <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(254,17,133,0.3)"></div> <!-- pink -->
+    <div class="glow-blob animate-glow-3 top-1/3 left-0 w-[24rem] h-[24rem] md:w-[35rem] md:h-[35rem]"
+      style="background: rgba(254,17,133,0.07)"></div> <!-- pink -->
 
     <!-- 4. Centro derecha -->
-    <div class="absolute top-1/2 right-0 w-80 h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(255,104,69,0.3)"></div> <!-- orange -->
+    <div class="glow-blob animate-glow-1 top-1/2 right-0 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem]"
+      style="background: rgba(255,104,69,0.07)"></div> <!-- orange -->
 
     <!-- 5. Abajo izquierda -->
-    <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(255,235,51,0.25)"></div> <!-- yellow -->
+    <div class="glow-blob animate-glow-2 bottom-80 -left-12 w-96 h-96 md:w-[32rem] md:h-[32rem]"
+      style="background: rgba(255,235,51,0.05)"></div> <!-- yellow -->
 
     <!-- 6. Abajo derecha -->
-    <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
-      style="background: rgba(0,208,195,0.3)"></div> <!-- cyan repetido -->
+    <div class="glow-blob animate-glow-3 -bottom-40 -right-10 w-[28rem] h-[28rem] md:w-[40rem] md:h-[40rem]"
+      style="background: rgba(0,208,195,0.08)"></div> <!-- cyan repetido -->
   </div>
 
 
@@ -177,7 +177,7 @@
           class="relative w-[320px] h-[640px] bg-black rounded-[3rem] shadow-2xl border-2 border-white overflow-hidden">
 
           <!-- Pantalla (imagen de tu mockup) -->
-          <img src="../assets/alta_previa_mockup.png" alt="Prototipo Alta Previa" class="w-full h-full object-cover">
+          <img src="../assets/altaprevia/alta_previa_mockup.png" alt="Prototipo Alta Previa" class="w-full h-full object-cover">
 
           <!-- Notch (parte superior del iPhone) -->
           <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-black rounded-b-2xl"></div>
@@ -209,9 +209,9 @@
     <div class="justify-center">
       <picture>
         <!-- Mobile -->
-        <source srcset="../assets/altaprevia_portada_mobile.png" media="(max-width: 767px)">
+        <source srcset="../assets/altaprevia/altaprevia_portada_mobile.png" media="(max-width: 767px)">
         <!-- Desktop (default) -->
-        <img src="../assets/altaprevia_portada_desktop.png" alt="Portada Alta Previa"
+        <img src="../assets/altaprevia/altaprevia_portada_desktop.png" alt="Portada Alta Previa"
           class="mx-auto max-w-[250px] sm:max-w-[320px] md:max-w-full rounded-lg shadow-soft mb-6 cursor-pointer">
       </picture>
     </div>
@@ -245,11 +245,11 @@
         grupales <italic>Yo Nunca y Quién es más probable a</italic>.
       </p>
       <div class="hidden lg:grid grid-cols-3 gap-6 justify-items-center max-w-6xl mx-auto">
-        <video src="../assets/verdad_reto.mp4" autoplay loop muted playsinline
+        <video src="../assets/altaprevia/verdad_reto.mp4" autoplay loop muted playsinline
           class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
-        <video src="../assets/verdad_reto_v2.mp4" autoplay loop muted playsinline
+        <video src="../assets/altaprevia/verdad_reto_v2.mp4" autoplay loop muted playsinline
           class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
-        <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+        <video src="../assets/altaprevia/yo_nunca.mp4" autoplay loop muted playsinline
           class="rounded-lg shadow-soft w-full max-w-[250px]"></video>
       </div> -->
 
@@ -257,11 +257,11 @@
       <div class="relative block lg:hidden">
         <div id="videoSlider"
           class="overflow-x-auto flex space-x-4 snap-x snap-mandatory scrollbar-hide scroll-smooth px-4">
-          <video src="../assets/verdad_reto.mp4" autoplay loop muted playsinline
+          <video src="../assets/altaprevia/verdad_reto.mp4" autoplay loop muted playsinline
             class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
-          <video src="../assets/verdad_reto_v2.mp4" autoplay loop muted playsinline
+          <video src="../assets/altaprevia/verdad_reto_v2.mp4" autoplay loop muted playsinline
             class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
-          <video src="../assets/yo_nunca.mp4" autoplay loop muted playsinline
+          <video src="../assets/altaprevia/yo_nunca.mp4" autoplay loop muted playsinline
             class="rounded-lg shadow-soft w-full flex-shrink-0 snap-center max-w-[300px]"></video>
         </div> -->
 
@@ -284,30 +284,30 @@
 
       <!-- Imágenes siempre visibles (desktop) -->
       <div class="hidden md:grid md:grid-cols-7 gap-4 mb-6">
-        <img src="../assets/img-playstore_1.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_2.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_3.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_4.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_5.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_6.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
-        <img src="../assets/img-playstore_7.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_1.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_2.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_3.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_4.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_5.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_6.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
+        <img src="../assets/altaprevia/img-playstore_7.png" class="rounded-lg shadow-soft cursor-pointer" alt="">
       </div>
 
       <!-- Slider en mobile -->
       <div class="md:hidden mb-6 flex overflow-x-auto gap-4 rounded-lg">
-        <img src="../assets/img-playstore_1.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_1.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_2.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_2.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_3.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_3.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_4.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_4.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_5.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_5.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_6.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_6.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
-        <img src="../assets/img-playstore_7.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
+        <img src="../assets/altaprevia/img-playstore_7.png" class="rounded-lg shadow-soft flex-shrink-0 w-64 cursor-pointer"
           alt="">
       </div>
 

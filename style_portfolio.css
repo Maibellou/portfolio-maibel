@@ -101,3 +101,33 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,0.3) transparent;
 }
+
+/* ── MODERN GLOWING GRADIENTS ── */
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  will-change: transform;
+  pointer-events: none;
+}
+
+@keyframes float-slow-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -40px) scale(1.08); }
+  66%       { transform: translate(-20px, 30px) scale(0.95); }
+}
+
+@keyframes float-slow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-40px, 30px) scale(1.06); }
+  70%       { transform: translate(20px, -30px) scale(0.92); }
+}
+
+@keyframes float-slow-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(45px, -20px) scale(1.04); }
+}
+
+.animate-glow-1 { animation: float-slow-1 20s ease-in-out infinite; }
+.animate-glow-2 { animation: float-slow-2 24s ease-in-out infinite; }
+.animate-glow-3 { animation: float-slow-3 28s ease-in-out infinite; }

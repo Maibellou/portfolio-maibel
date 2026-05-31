@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Luminar</title>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        jost: ['Jost', 'sans-serif'],
+                        cormorant: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        lum: {
+                            bg: '#161616',
+                            card: '#333333',
+                            text: '#FEF9EC',
+                            accent: '#F6BE25',
+                            sub: '#FADC89'
+                        }
+                    },
+                    boxShadow: { 'soft': '0 10px 40px rgba(0, 0, 0, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style_portfolio.css" />
+</head>
+
+<body class="bg-lum-bg text-lum-text font-jost antialiased relative overflow-x-hidden">
+
+    <!-- FONDOS GRADIENTES -->
+    <div class="absolute -z-10 inset-0 overflow-hidden opacity-40">
+        <!-- 1. Arriba izquierda -->
+        <div class="glow-blob animate-glow-1 -top-32 -left-16 w-72 h-72 md:w-96 md:h-96"
+            style="background: rgba(246, 190, 37, 0.15)"></div>
+
+        <!-- 2. Arriba derecha -->
+        <div class="glow-blob animate-glow-2 top-60 -right-20 w-64 h-64 md:w-140 md:h-140"
+            style="background: rgba(250, 220, 137, 0.1)"></div>
+
+        <!-- 3. Centro izquierda -->
+        <div class="glow-blob animate-glow-3 top-1/3 left-0 w-64 h-64 md:w-96 md:h-96"
+            style="background: rgba(246, 190, 37, 0.08)"></div>
+
+        <!-- 4. Abajo derecha -->
+        <div class="glow-blob animate-glow-1 -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem]"
+            style="background: rgba(246, 190, 37, 0.1)"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <a href="../index.html" class="text-lum-accent hover:text-lum-sub transition font-medium">← Volver a
+            proyectos</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <!-- Título: nombre + breve descripcion -->
+                <div class="inline-flex items-center gap-3 text-sm text-lum-sub mb-4">
+                    <span class="font-medium tracking-wide">Proyecto web</span>
+                    <span class="opacity-40">•</span>
+                    <span>2026</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 font-cormorant text-lum-text font-bold">
+                    Luminar
+                </h1>
+
+                <p class="text-lum-text/80 text-lg mb-8 leading-relaxed font-light">
+                    Identidad visual y desarrollo frontend para una empresa de cerramientos de alta gama. El foco estuvo
+                    en alejar a la marca del rubro industrial tradicional y posicionarla en el sector de la arquitectura
+                    premium mediante un diseño limpio y animaciones fluidas.
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-10 text-lum-sub">
+                    <span class="text-sm font-medium tracking-wide">Branding • UX/UI • Frontend Development</span>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="#" target="_blank"
+                        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-lum-bg bg-lum-accent hover:bg-lum-sub transition shadow-soft font-medium tracking-wide">
+                        Ver sitio web
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Hero Mockups Overlapping -->
+            <div class="relative w-full aspect-[4/3] flex items-center justify-center md:justify-end">
+                <div class="relative w-[92%] h-full flex items-center">
+                    <!-- Mac Mockup -->
+                    <div class="w-[98%] rounded-xl overflow-hidden transition duration-500 hover:scale-[1.01]">
+                        <img src="../assets/luminar/luminar_mockup_mac.png" alt="Luminar Desktop Mockup"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                    <!-- Mobile Mockup -->
+                    <div
+                        class="absolute right-[4%] top-[65%] -translate-y-1/2 w-[26%] z-10 rounded-2xl overflow-hidden transition duration-500 hover:scale-[1.05] hover:z-20">
+                        <img src="../assets/luminar/luminar_mockup_mov.png" alt="Luminar Mobile Mockup"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTRATEGIA E IDENTIDAD -->
+    <section class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+        <h2 class="text-4xl md:text-5xl font-cormorant font-bold text-lum-text mb-8">Estrategia e identidad</h2>
+
+        <div class="max-w-4xl">
+            <p class="text-lum-text/80 text-lg leading-relaxed mb-6 font-light">
+                Al analizar el mercado, noté que la competencia mantenía una estética de "metalúrgica tradicional", con
+                interfaces saturadas de información técnica y llamados a la acción repetitivos. Para Luminar, el enfoque
+                fue opuesto: diseñé una identidad visual orientada a la arquitectura de alta gama.
+            </p>
+            <p class="text-lum-text/80 text-lg leading-relaxed mb-6 font-light">
+                Desde las piezas corporativas hasta la web, la premisa fue dejar de vender perfiles de aluminio y
+                empezar a comunicar integración espacial y estilo de vida, conectando directamente con estudios de
+                arquitectura y clientes residenciales exigentes.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="p-6 rounded-2xl bg-lum-card shadow-soft border border-lum-text/5">
+                <p class="text-xs text-lum-sub mb-2 tracking-widest uppercase font-semibold">Rol</p>
+                <p class="font-medium text-lum-text leading-relaxed">Branding, UX/UI Design & Frontend Developer.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-lum-card shadow-soft border border-lum-text/5">
+                <p class="text-xs text-lum-sub mb-2 tracking-widest uppercase font-semibold">Alcance</p>
+                <p class="font-medium text-lum-text leading-relaxed">Análisis de competencia, identidad visual,
+                    desarrollo web.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-lum-card shadow-soft border border-lum-text/5">
+                <p class="text-xs text-lum-sub mb-2 tracking-widest uppercase font-semibold">Herramientas</p>
+                <p class="font-medium text-lum-text leading-relaxed">Figma, Illustrator, Vite, Tailwind CSS, GSAP,
+                    Resend.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERFAZ Y DESARROLLO -->
+    <section class="bg-lum-card/30 py-12 md:py-24 border-y border-lum-text/5 mt-8">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-cormorant font-bold text-lum-text mb-8">Interfaz y Desarrollo</h2>
+            <div class="max-w-4xl">
+                <p class="text-lum-text/80 text-lg leading-relaxed mb-6 font-light">
+                    La interfaz refleja la calidad premium de la marca mediante un ecosistema oscuro y el uso de
+                    tipografía editorial (Cormorant Garamond). Agregué detalles visuales funcionales, como efecto
+                    glassmorphism en la navegación al hacer scroll y destellos ocres en los estados hover, emulando los
+                    reflejos del cristal.
+                </p>
+                <p class="text-lum-text/80 text-lg leading-relaxed font-light">
+                    Desarrollé el sitio con Vite y Tailwind CSS. Para la sección de servicios complementarios, evité un
+                    scroll excesivo implementando animaciones con GSAP. Mediante scroll pinning, logré que los distintos
+                    sistemas transicionen suavemente en el mismo bloque. Finalmente, la lógica del formulario se
+                    resolvió integrando Resend.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISEÑO DE INTERFAZ -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-cormorant font-bold text-lum-text mb-4">Diseño de interfaz</h2>
+        <p class="text-lum-text/80 text-lg leading-relaxed mb-10 max-w-4xl font-light">
+            Propuesta visual completa y manual de identidad para el desarrollo de la plataforma de cerramientos de alta
+            gama.
+        </p>
+
+        <!-- PDF -->
+        <div id="pdfViewer"
+            class="w-full max-w-6xl rounded-lg mx-auto shadow-soft border border-lum-text/10 bg-lum-card/30"></div>
+
+        <!-- Botón Ver PDF -->
+        <div class="items-center flex flex-col gap-4">
+            <a href="../assets/luminar/luminar_web.pdf" target="_blank"
+                class="inline-flex items-center gap-2 px-8 py-3.5 my-6 rounded-full text-lum-bg bg-lum-accent hover:bg-lum-sub transition shadow-soft font-medium tracking-wide">
+                Ver PDF <span class="font-bold">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-lum-text/50 mt-10 border-t border-lum-text/10">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <span>2026 Luminar — Maibel Romero</span>
+            <div class="flex gap-4">
+                <a href="../index.html"
+                    class="text-lum-accent hover:text-lum-sub hover:underline transition font-medium">Más
+                    proyectos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+        const url = "../assets/luminar/luminar_web.pdf";
+
+        const loadingTask = pdfjsLib.getDocument(url);
+        loadingTask.promise.then(async function (pdf) {
+            const container = document.getElementById("pdfViewer");
+            const devicePixelRatio = window.devicePixelRatio || 1; // para alta resolución
+
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                const page = await pdf.getPage(pageNumber);
+
+                const canvas = document.createElement("canvas");
+                canvas.classList.add("mx-auto", "block");
+                container.appendChild(canvas);
+
+                const context = canvas.getContext("2d");
+
+                // Viewport inicial
+                const viewport = page.getViewport({ scale: 1 });
+
+                // Escala según ancho contenedor y devicePixelRatio para mayor nitidez
+                const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+                const scaledViewport = page.getViewport({ scale });
+
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+
+                // Ajuste CSS para que se adapte al contenedor y tenga alto máximo
+                canvas.style.width = "100%";
+                canvas.style.height = "auto";
+
+                await page.render({
+                    canvasContext: context,
+                    viewport: scaledViewport,
+                }).promise;
+            }
+        }).catch(function (error) {
+            console.error("Error loading PDF via PDF.js, using iframe fallback:", error);
+            const container = document.getElementById("pdfViewer");
+            container.innerHTML = `<iframe src="${url}#toolbar=0" class="w-full h-full rounded-lg" style="border: none; min-height: 600px;"></iframe>`;
+        });
+    </script>
+
+</body>
+
+</html>

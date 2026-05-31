@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         x: {
           max: 100,
           ticks: { display: false },
-          grid: { color: '#5e1b84' }
+          grid: { color: '#400000' }
         },
         y: {
           ticks: {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       labels: ['Photoshop', 'Illustrator', 'Lightroom', 'After Effects', 'Premiere', 'Figma', 'Reaper', 'Blender'],
       datasets: [{
         data: [100, 90, 100, 60, 90, 95, 50, 30],
-        backgroundColor: '#B833FF80',
+        backgroundColor: '#56000080',
         borderRadius: 6
       }]
     }
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       labels: ['HTML & CSS', 'JavaScript', 'Tailwind CSS', 'p5.js', 'VS Code', 'Git & GitHub', 'Node.js', 'TypeScript'],
       datasets: [{
         data: [100, 85, 95, 95, 100, 90, 50, 40],
-        backgroundColor: '#11F2CC80',
+        backgroundColor: '#bd1c1c80',
         borderRadius: 6
       }]
     }
@@ -75,9 +75,9 @@ if (marketingCtx) {
       datasets: [{
         label: 'Nivel',
         data: [90, 90, 100, 60, 70, 80, 80],
-        backgroundColor: 'rgba(184, 51, 255, 0.3)',
-        borderColor: '#B833FF',
-        pointBackgroundColor: '#B833FF',
+        backgroundColor: 'rgba(86, 0, 0, 0.35)',
+        borderColor: '#bd1c1c',
+        pointBackgroundColor: '#bd1c1c',
         borderWidth: 2
       }]
     },
@@ -95,8 +95,8 @@ if (marketingCtx) {
             display: false,
             stepSize: 10 
           },
-          angleLines: { color: '#5e1b84' },
-          grid: { color: '#5e1b84' },
+          angleLines: { color: '#400000' },
+          grid: { color: '#400000' },
           pointLabels: {
             color: '#fff',
             font: { size: 14 },
@@ -134,9 +134,9 @@ if (iaCtx) {
       datasets: [{
         label: 'Nivel',
         data: [100, 100, 70, 90, 50, 90, 90],
-        backgroundColor: 'rgba(17, 242, 204, 0.3)',
-        borderColor: '#11F2CC',
-        pointBackgroundColor: '#11F2CC',
+        backgroundColor: 'rgba(189, 28, 28, 0.3)',
+        borderColor: '#bd1c1c',
+        pointBackgroundColor: '#bd1c1c',
         borderWidth: 2
       }]
     },
@@ -154,8 +154,8 @@ if (iaCtx) {
             display: false,
             stepSize: 10
           },
-          angleLines: { color: '#5e1b84' },
-          grid: { color: '#5e1b84' },
+          angleLines: { color: '#400000' },
+          grid: { color: '#400000' },
           pointLabels: {
             color: '#fff',
             font: { size: 14 },

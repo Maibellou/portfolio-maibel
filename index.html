@@ -4,166 +4,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currículum</title>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            ubuntu: ['Ubuntu', 'sans-serif'],
-          },
-          colors: {
-            'dark-purple': '#190127',
-            'electric-purple': '#B833FF',
-            'aquamarine': '#11F2CC',
-            'tail': '#01C4C1',
-            'gray': '#161616',
-          }
-        }
-      }
-    }
-  </script>
+  <title>Maibel Romero — UI/UX & Visual Designer</title>
+  <meta name="description"
+    content="Portfolio de Maibel Romero — UI/UX Designer, Visual Designer y Frontend Developer. Diseño de interfaces, sistemas visuales e identidad de marca." />
+  <meta name="author" content="Maibel Romero" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/iej4ifd.css" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-gray text-white font-ubuntu py-10 relative">
-  <!-- Fondos artísticos -->
-  <div class="absolute -z-10 inset-0 overflow-hidden">
-    <!-- 1. Arriba izquierda -->
-    <div class="absolute -top-32 -left-16 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(127, 255, 212, 0.4)"></div> <!-- aquamarine -->
+<body>
 
-    <!-- 2. Arriba derecha -->
-    <div class="absolute top-60 -right-20 w-80 h-80 md:w-140 md:h-140 rounded-full blur-3xl"
-      style="background: rgba(191,0,255,0.3)"></div> <!-- electric purple -->
+  <!-- ░░ NOISE OVERLAY ░░ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-    <!-- 3. Centro izquierda 
-    <div class="absolute top-1/3 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(127,255,212,0.25)"></div> --> <!-- aquamarine -->
-
-    <!-- 4. Centro derecha
-    <div class="absolute top-1/2 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(191,0,255,0.25)"></div>  --> <!-- electric purple -->
-
-    <!-- 5. Abajo izquierda
-    <div class="absolute bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96 rounded-full blur-3xl"
-      style="background: rgba(127,255,212,0.3)"></div>  --> <!-- aquamarine -->
-
-    <!-- 6. Abajo derecha -->
-    <div class="absolute -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full blur-3xl"
-      style="background: rgba(191,0,255,0.2)"></div> <!-- electric purple -->
+  <!-- ░░ MESH GRADIENT BACKGROUND ░░ -->
+  <div class="mesh-bg" aria-hidden="true">
+    <div class="mesh-blob mesh-blob--1"></div>
+    <div class="mesh-blob mesh-blob--2"></div>
+    <div class="mesh-blob mesh-blob--3"></div>
+    <div class="mesh-blob mesh-blob--4"></div>
   </div>
 
-
-  <header class="flex flex-col sm:flex-row items-center justify-between px-6 py-6 max-w-5xl mx-auto">
-    <div class="mt-6 sm:mt-0 sm:w-1/3 flex justify-center">
-      <img src="assets/perfil.png" alt="Foto de perfil de Maibel" class="w-40 h-40 object-cover rounded-full shadow-lg">
-    </div>
-
-    <div class="text-left sm:w-2/3 sm:ml-6">
-      <h1 class="text-3xl font-bold mb-2">Maibel Romero</h1>
-      <h2 class="text-lg italic -mt-1 mb-4">UI & Visual Designer Mid. • Frontend Jr. • Tec. en Artes Multimediales</h2>
-      <p class="text-lg mt-2 mb-5">
+  <!-- ░░ HERO ░░ -->
+  <header class="hero" id="hero">
+    <div class="hero__inner">
+      <h1 class="hero__title">Mai Romero<span class="hero__dot">.</span></h1>
+      <p class="hero__subtitle">UX/UI Designer · Frontend · Tec. Artes Multimediales</p>
+      <p class="hero__description">
         Diseño interfaces y sistemas visuales que combinan estética y propósito, con una mirada artística y técnica.
       </p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Hablemos →</a>
+      </div>
     </div>
   </header>
 
-  <section class="max-w-6xl mx-auto px-6 xl:px-0">
-    <div class="flex flex-col md:flex-row gap-8">
+  <!-- ░░ WORK — BENTO GRID ░░ -->
+  <section class="work" id="work" aria-label="Proyectos seleccionados">
+    <div class="section-inner">
 
-      <!-- Columna 1 -->
-      <div class="flex-1 p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
-        <h2 class="text-2xl font-bold mb-2">Skills</h2>
-        <span class="text-lg">
-          Diseño UI • Diseño visual • Branding • Fotografía • Diseño UX • Diseño web • Marketing digital • Metodologías ágiles
-        </span>
+      <div class="work__header">
+        <h2 class="section-title">Proyectos seleccionados</h2>
       </div>
 
-      <!-- Columna 2 -->
-      <div class="flex-1 p-5 rounded-2xl bg-white/5 shadow-soft md:col-span-1">
-        <h2 class="text-2xl font-bold mb-2">Tools</h2>
-        <span class="text-lg">
-          Figma • Adobe Suite (Ps, Ai, Ae, Pr) • VS Code • HTML/CSS/JS • Herramientas de IA
-        </span>
-      </div>
+      <div class="bento" role="list">
 
+        <!-- ████ ROW 1: TOP CARDS ████ -->
+
+        <!-- CARD 1: Geofractatl — SPAN 5 -->
+        <a href="proyectos/geofractatl.html" class="bento__card bento__card--span-5" role="listitem"
+          aria-label="Proyecto Geofractatl — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #ffffff;">
+            <img src="assets/geofractatl_logo_h.svg" alt="Logotipo de Geofractatl" class="bento__logo" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">UI Design</span>
+              <span class="tag">Frontend Dev</span>
+            </div>
+            <h3 class="bento__title">Geofractatl</h3>
+            <p class="bento__desc">Consultora B2B de hidrología e infraestructura.</p>
+          </div>
+        </a>
+
+        <!-- CARD 2: Luminar — SPAN 7 -->
+        <a href="proyectos/luminar.html" class="bento__card bento__card--span-7" role="listitem"
+          aria-label="Proyecto Luminar — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #161616;">
+            <img src="assets/logo_dorado.svg" alt="Logotipo de Luminar" class="bento__logo" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Visual Identity</span>
+              <span class="tag">Frontend Dev</span>
+            </div>
+            <h3 class="bento__title">Luminar</h3>
+            <p class="bento__desc">Sistemas de cerramientos de alta gama.</p>
+          </div>
+        </a>
+
+        <!-- ████ ROW 2 ████ -->
+
+        <!-- CARD 3: Hexagramia — SPAN 7 -->
+        <a href="proyectos/hexagramia.html" class="bento__card bento__card--span-7" role="listitem"
+          aria-label="Proyecto Hexagramia — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #11072F;">
+            <img src="assets/hexagramia_logo_h.svg" alt="Logotipo de Hexagramia" class="bento__logo" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Visual Identity</span>
+              <span class="tag">AR Experience</span>
+            </div>
+            <h3 class="bento__title">Hexagramia</h3>
+            <p class="bento__desc">Plataforma de música con inteligencia artificial.</p>
+          </div>
+        </a>
+
+        <!-- CARD 4: Dognation — SPAN 5 -->
+        <a href="proyectos/dognation.html" class="bento__card bento__card--span-5" role="listitem"
+          aria-label="Proyecto Dognation — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #FCECE1;">
+            <img src="assets/dognation_logo_h.svg" alt="Logotipo de Dognation" class="bento__logo"
+              style="max-width: 75%; max-height: 52%;" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Visual Identity</span>
+              <span class="tag">App Mobile</span>
+            </div>
+            <h3 class="bento__title">Dognation</h3>
+            <p class="bento__desc">Aplicación móvil para adopción de mascotas.</p>
+          </div>
+        </a>
+
+        <!-- ████ ROW 3 ████ -->
+
+        <!-- CARD 5: La Chihuahua — SPAN 5 -->
+        <a href="proyectos/lachihuahua.html" class="bento__card bento__card--span-5" role="listitem"
+          aria-label="Proyecto La Chihuahua — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #FFF8ED;">
+            <img src="assets/chihuahua_logo_h.png" alt="Logotipo de La Chihuahua" class="bento__logo" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">Frontend Dev</span>
+              <span class="tag">Rebranding</span>
+              <span class="tag">E-commerce</span>
+            </div>
+            <h3 class="bento__title">La Chihuahua</h3>
+            <p class="bento__desc">Restaurante mexicano de comida rápida.</p>
+          </div>
+        </a>
+
+        <!-- CARD 6: Alta Previa — SPAN 7 -->
+        <a href="proyectos/altaprevia.html" class="bento__card bento__card--span-7" role="listitem"
+          aria-label="Proyecto Alta Previa — Ver caso de estudio">
+          <div class="bento__card-img" aria-hidden="true" style="background-color: #161616;">
+            <img src="assets/imagotipo_altaprevia.png" alt="Logotipo de Alta Previa" class="bento__logo" />
+          </div>
+          <div class="bento__card-content">
+            <div class="bento__tags" aria-label="Categorías del proyecto">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Visual Identity</span>
+              <span class="tag">App Mobile</span>
+            </div>
+            <h3 class="bento__title">Alta Previa</h3>
+            <p class="bento__desc">Juegos móviles para fiestas y reuniones.</p>
+          </div>
+        </a>
+
+
+      </div>
     </div>
   </section>
 
-  <section class="flex flex-col items-center px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl w-full">
-
-      <!-- Card: Alta Previa -->
-      <a href="proyectos/altaprevia.html"
-        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
-
-        <div class="absolute inset-0">
-          <img src="assets/preview_AltaPrevia.jpg"
-            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
-            alt="Alta Previa preview">
+  <!-- ░░ CONTACTO Y FOOTER (FULL VIEWPORT) ░░ -->
+  <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- ░░ CONTACTO ░░ -->
+    <section class="contact" id="contacto" style="display: flex; align-items: center; flex-grow: 1; padding: 2rem 0;">
+      <div class="section-inner"
+        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; width: 100%;">
+        <h2 class="section-title" style="font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.1;">Hablemos
+        </h2>
+        <p
+          style="color: var(--col-text-mid); max-width: 50ch; margin: 0 auto 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+          Si tenés un proyecto en mente, buscás incorporar a alguien a tu equipo o necesitás resolver un problema de
+          diseño, contactame.
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:camilamaibelromero@gmail.com" class="btn btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email
+          </a>
+          <a href="https://wa.me/5491122556418" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/maibelromero/" class="btn btn--ghost" target="_blank"
+            rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
         </div>
+      </div>
+    </section>
 
-        <div class="relative z-10">
-          <h2 class="text-xl font-semibold">Alta Previa</h2>
-          <p class="text-sm text-white/80">Diseño UX/UI de la app, branding y marketing + AR.</p>
-        </div>
-      </a>
-
-      <!-- Card: Hexagramia -->
-      <a href="proyectos/hexagramia.html"
-        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
-
-        <div class="absolute inset-0">
-          <img src="assets/preview_Hexagramia.png"
-            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
-            alt="Hexagramia preview">
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="text-xl font-semibold">Hexagramia</h2>
-          <p class="text-sm text-white/80">Diseño UX/UI de la app, branding + AR.</p>
-        </div>
-      </a>
-
-
-      <!-- Card: Dognation -->
-      <a href="proyectos/dognation.html"
-        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
-
-        <div class="absolute inset-0">
-          <img src="assets/preview_Dognation.png"
-            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
-            alt="Dognation preview">
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="text-xl font-semibold">Dognation</h2>
-          <p class="text-sm text-white/80">Diseño UX/UI de la app mobile e identidad visual.</p>
-        </div>
-      </a>
-
-      <!-- Card: La Chihuahua -->
-      <a href="proyectos/lachihuahua.html"
-        class="group relative rounded-2xl p-6 shadow-lg border border-white/10 bg-white/5 backdrop-blur-lg hover:scale-105 transform transition duration-300 overflow-hidden flex flex-col justify-end min-h-60 sm:min-h-60">
-
-        <div class="absolute inset-0">
-          <img src="assets/preview_LaChihuahua.png"
-            class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-300"
-            alt="La Chihuahua preview">
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="text-xl font-semibold">La Chihuahua</h2>
-          <p class="text-sm text-white/80">Rebranding, diseño y desarrollo de ecommerce.</p>
-        </div>
-      </a>
-
-    </div>
-  </section>
+    <!-- ░░ FOOTER ░░ -->
+    <footer class="footer" role="contentinfo" style="padding-bottom: 2.5rem;">
+      <p class="footer__copy">© 2026 Maibel Romero. Diseñado y desarrollado con intención.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 

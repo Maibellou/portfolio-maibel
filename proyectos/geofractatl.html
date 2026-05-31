@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Geofractatl</title>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Urbanist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        urbanist: ['Urbanist', 'sans-serif'],
+                        robotoslab: ['Roboto Slab', 'serif'],
+                    },
+                    colors: {
+                        geo: {
+                            primary: '#004F71',
+                            secondary: '#376DA9',
+                            accent: '#784212',
+                            neutral: '#6D6D6D',
+                            bg: '#F8FAFC' // Light bluish gray background
+                        }
+                    },
+                    boxShadow: { 'soft': '0 10px 30px rgba(0, 79, 113, 0.08)' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../style_portfolio.css" />
+</head>
+
+<body class="bg-geo-bg text-geo-neutral font-urbanist antialiased relative overflow-x-hidden">
+
+    <!-- FONDOS GRADIENTES -->
+    <div class="absolute -z-10 inset-0 overflow-hidden opacity-80">
+        <!-- 1. Arriba izquierda -->
+        <div class="glow-blob animate-glow-1 -top-32 -left-16 w-72 h-72 md:w-96 md:h-96"
+            style="background: rgba(55, 109, 169, 0.25)"></div>
+
+        <!-- 2. Arriba derecha -->
+        <div class="glow-blob animate-glow-2 top-60 -right-20 w-64 h-64 md:w-140 md:h-140"
+            style="background: rgba(0, 79, 113, 0.20)"></div>
+
+        <!-- 3. Centro izquierda -->
+        <div class="glow-blob animate-glow-3 top-1/3 left-0 w-64 h-64 md:w-96 md:h-96"
+            style="background: rgba(120, 66, 18, 0.15)"></div>
+
+        <!-- 4. Centro derecha -->
+        <div class="glow-blob animate-glow-1 top-1/2 right-0 w-64 h-64 md:w-96 md:h-96"
+            style="background: rgba(55, 109, 169, 0.2)"></div>
+
+        <!-- 5. Abajo izquierda -->
+        <div class="glow-blob animate-glow-2 bottom-80 -left-12 w-72 h-72 md:w-96 md:h-96"
+            style="background: rgba(0, 79, 113, 0.25)"></div>
+
+        <!-- 6. Abajo derecha -->
+        <div class="glow-blob animate-glow-3 -bottom-40 -right-10 w-80 h-80 md:w-[28rem] md:h-[28rem]"
+            style="background: rgba(55, 109, 169, 0.2)"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <a href="../index.html" class="text-geo-primary hover:text-geo-secondary transition font-bold">← Volver a
+            proyectos</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <!-- Título: nombre + breve descripcion -->
+                <div class="inline-flex items-center gap-3 text-sm text-geo-primary mb-4">
+                    <span class="font-semibold">Proyecto web</span>
+                    <span class="opacity-40">•</span>
+                    <span>2026</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl leading-tight mb-4 font-robotoslab text-geo-primary font-bold">
+                    Geofractatl
+                </h1>
+
+                <p class="text-geo-neutral text-lg mb-6 leading-relaxed">
+                    Diseño UI y desarrollo frontend para una consultora de ingeniería en recursos hídricos. Un proyecto
+                    enfocado en estructurar y presentar información técnica de manera clara y accesible, optimizando
+                    la velocidad y la independencia de la infraestructura.
+                </p>
+
+                <!-- Tags (pills con color de marca) -->
+                <div class="flex flex-wrap gap-2 mb-8 text-geo-primary">
+                    <span class="text-lg font-bold">Diseño UI • Frontend Development</span>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://www.geofractatl.com/" target="_blank"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-geo-primary hover:bg-geo-secondary transition shadow-soft font-semibold">
+                        Visitar sitio web
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Hero Mockups Overlapping -->
+            <div class="relative w-full aspect-[4/3] flex items-center justify-center md:justify-end">
+                <div class="relative w-[92%] h-full flex items-center">
+                    <!-- Mac Mockup -->
+                    <div class="w-[98%] rounded-xl overflow-hidden transition duration-500 hover:scale-[1.01]">
+                        <img src="../assets/geofractatl/geofractatl_mockup_mac.png" alt="Geofractatl Desktop Mockup"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                    <!-- Mobile Mockup -->
+                    <div
+                        class="absolute right-[4%] top-[65%] -translate-y-1/2 w-[26%] z-10 rounded-2xl overflow-hidden transition duration-500 hover:scale-[1.05] hover:z-20">
+                        <img src="../assets/geofractatl/geofractatl_mockup_mov.png" alt="Geofractatl Mobile Mockup"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE EL PROYECTO -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-robotoslab font-bold text-geo-primary mb-6">Sobre el proyecto</h2>
+
+        <div class="max-w-4xl">
+            <p class="text-geo-neutral text-lg leading-relaxed mb-6">
+                Geofractatl necesitaba una presencia digital que transmitiera la misma precisión que aplican en sus
+                estudios hidrológicos. Partiendo de una identidad de marca ya definida, mi trabajo consistió en diseñar
+                la interfaz y desarrollar la web desde cero, priorizando la claridad técnica y el rendimiento.
+            </p>
+            <p class="text-geo-neutral text-lg leading-relaxed mb-6">
+                Para evitar cargas innecesarias y asegurar que el sitio fuera rápido, armé la estructura utilizando Vite
+                con Vanilla CSS y JavaScript. Además, resolví la lógica de
+                contacto configurando Serverless Functions para asegurar un flujo de comunicación directo y eficiente.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+            <div class="p-5 rounded-2xl bg-white shadow-soft md:col-span-1 border border-geo-primary/10">
+                <p class="text-sm text-geo-secondary mb-1">Rol</p>
+                <p class="font-semibold text-geo-primary">UI Design & Frontend Developer</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white shadow-soft md:col-span-1 border border-geo-primary/10">
+                <p class="text-sm text-geo-secondary mb-1">Alcance</p>
+                <p class="font-semibold text-geo-primary">Landing page corporativa, UI, front-end</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white shadow-soft md:col-span-2 border border-geo-primary/10">
+                <p class="text-sm text-geo-secondary mb-1">Herramientas</p>
+                <p class="font-semibold text-geo-primary">Antigravity - HTML, CSS, JavaScript, Vite y Vercel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARQUITECTURA DE LA INFORMACIÓN -->
+    <section class="bg-white/50 py-10 md:py-14 border-y border-geo-primary/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-robotoslab font-bold text-geo-primary mb-6">Arquitectura de la
+                información</h2>
+            <div class="max-w-4xl">
+                <p class="text-geo-neutral text-lg leading-relaxed">
+                    El sitio fue estructurado como una landing page robusta. Cada sección fue pensada para guiar al
+                    usuario a través de un funnel técnico: desde la presentación de la empresa, pasando por el detalle
+                    de los servicios (como modelación hidráulica o diseño de obras), hasta culminar en la metodología de
+                    trabajo y el contacto directo. El objetivo fue que el usuario técnico encuentre la información que
+                    valide a la consultora sin fricciones.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIDAD VISUAL -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-robotoslab font-bold text-geo-primary mb-6">Identidad visual</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+            <!-- Izquierda: Paleta y Tipografía -->
+            <div class="order-2 md:order-1 flex flex-col gap-12">
+                <!-- Color Palette display -->
+                <div class="flex flex-wrap gap-6">
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full bg-geo-primary shadow-soft border border-geo-primary/10">
+                        </div>
+                        <span class="text-sm font-semibold text-geo-neutral">#004F71</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full bg-geo-secondary shadow-soft border border-geo-primary/10">
+                        </div>
+                        <span class="text-sm font-semibold text-geo-neutral">#376DA9</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full bg-geo-accent shadow-soft border border-geo-primary/10">
+                        </div>
+                        <span class="text-sm font-semibold text-geo-neutral">#784212</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-16 h-16 rounded-full bg-geo-neutral shadow-soft border border-geo-primary/10">
+                        </div>
+                        <span class="text-sm font-semibold text-geo-neutral">#6D6D6D</span>
+                    </div>
+                </div>
+
+                <!-- Tipografía -->
+                <div class="flex flex-col gap-6">
+                    <!-- Roboto Slab -->
+                    <div class="flex items-center gap-6">
+                        <div class="text-6xl font-robotoslab text-geo-primary font-bold leading-none">Aa</div>
+                        <div>
+                            <p class="text-xl font-robotoslab font-bold text-geo-primary mb-1">Roboto Slab</p>
+                            <p class="text-sm text-geo-neutral">Títulos y jerarquía</p>
+                        </div>
+                    </div>
+                    <!-- Urbanist -->
+                    <div class="flex items-center gap-6">
+                        <div class="text-6xl font-urbanist text-geo-primary font-bold leading-none">Aa</div>
+                        <div>
+                            <p class="text-xl font-urbanist font-bold text-geo-primary mb-1">Urbanist</p>
+                            <p class="text-sm text-geo-neutral">Lectura técnica y párrafos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecha: Texto -->
+            <div class="order-1 md:order-2">
+                <p class="text-geo-neutral text-lg leading-relaxed mb-6">
+                    El equipo me entregó un manual de marca que integra los conceptos de ingeniería, tierra y agua. En
+                    el diseño UI, implementé esta paleta respetando su jerarquía funcional: utilicé los tonos azules
+                    para los elementos interactivos y la confianza tecnológica, mientras que el gris y el café se
+                    aplicaron para darle solidez visual a la estructura.
+                </p>
+                <p class="text-geo-neutral text-lg leading-relaxed">
+                    La tipografía <span class="font-robotoslab font-bold text-geo-primary">Roboto Slab</span> me
+                    permitió darle carácter y peso a los títulos, combinada con <span
+                        class="font-urbanist font-bold text-geo-primary">Urbanist</span> para asegurar una lectura
+                    cómoda en los bloques de texto técnico.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISEÑO DE INTERFAZ -->
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+        <h2 class="text-3xl md:text-4xl font-robotoslab font-bold text-geo-primary mb-4">Diseño de interfaz</h2>
+        <p class="text-geo-neutral text-lg leading-relaxed mb-10 max-w-4xl">
+            Propuesta visual completa y manual de identidad para el desarrollo de la plataforma de ingeniería de
+            recursos hídricos.
+        </p>
+
+        <!-- PDF -->
+        <div id="pdfViewer"
+            class="w-full max-w-6xl rounded-lg mx-auto shadow-soft border border-geo-primary/10 bg-white/50"></div>
+
+        <!-- Botón Ver PDF -->
+        <div class="items-center flex flex-col gap-4">
+            <a href="../assets/geofractatl/geofractatl_web.pdf" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 my-6 rounded-full text-white bg-geo-primary hover:bg-geo-secondary transition shadow-soft font-semibold">
+                Ver PDF <span class="font-bold">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-geo-neutral mt-10 border-t border-geo-primary/10">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <span>2024 Geofractatl — Maibel Romero</span>
+            <div class="flex gap-4">
+                <a href="../index.html"
+                    class="text-geo-primary hover:text-geo-secondary hover:underline font-bold transition">Más
+                    proyectos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+        const url = "../assets/geofractatl/geofractatl_web.pdf";
+
+        const loadingTask = pdfjsLib.getDocument(url);
+        loadingTask.promise.then(async function (pdf) {
+            const container = document.getElementById("pdfViewer");
+            const devicePixelRatio = window.devicePixelRatio || 1; // para alta resolución
+
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                const page = await pdf.getPage(pageNumber);
+
+                const canvas = document.createElement("canvas");
+                canvas.classList.add("mx-auto", "block");
+                container.appendChild(canvas);
+
+                const context = canvas.getContext("2d");
+
+                // Viewport inicial
+                const viewport = page.getViewport({ scale: 1 });
+
+                // Escala según ancho contenedor y devicePixelRatio para mayor nitidez
+                const scale = (container.clientWidth / viewport.width) * devicePixelRatio * 1.5;
+                const scaledViewport = page.getViewport({ scale });
+
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+
+                // Ajuste CSS para que se adapte al contenedor y tenga alto máximo
+                canvas.style.width = "100%";
+                canvas.style.height = "auto";
+
+                await page.render({
+                    canvasContext: context,
+                    viewport: scaledViewport,
+                }).promise;
+            }
+        }).catch(function (error) {
+            console.error("Error loading PDF via PDF.js, using iframe fallback:", error);
+            const container = document.getElementById("pdfViewer");
+            container.innerHTML = `<iframe src="${url}#toolbar=0" class="w-full h-full rounded-lg" style="border: none; min-height: 600px;"></iframe>`;
+        });
+    </script>
+
+</body>
+
+</html>
